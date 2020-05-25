@@ -1,0 +1,222 @@
+{
+  "data": {
+    "routines": [
+      {
+        "id": "2",
+        "title": "Sample Routine",
+        "body": "Sample Routine Body",
+        "slug": "sample-routine",
+        "media": {
+          "url": "/uploads/calendar-cup-depth-of-field-210660_3785bd3a87.jpeg",
+          "formats": {
+            "thumbnail": {
+              "hash": "thumbnail_calendar-cup-depth-of-field-210660_3785bd3a87",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 234,
+              "height": 156,
+              "size": 5.5,
+              "url": "/uploads/thumbnail_calendar-cup-depth-of-field-210660_3785bd3a87.jpeg"
+            },
+            "large": {
+              "hash": "large_calendar-cup-depth-of-field-210660_3785bd3a87",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 1000,
+              "height": 666,
+              "size": 46.48,
+              "url": "/uploads/large_calendar-cup-depth-of-field-210660_3785bd3a87.jpeg"
+            },
+            "medium": {
+              "hash": "medium_calendar-cup-depth-of-field-210660_3785bd3a87",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 750,
+              "height": 500,
+              "size": 29.31,
+              "url": "/uploads/medium_calendar-cup-depth-of-field-210660_3785bd3a87.jpeg"
+            },
+            "small": {
+              "hash": "small_calendar-cup-depth-of-field-210660_3785bd3a87",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 500,
+              "height": 333,
+              "size": 15.96,
+              "url": "/uploads/small_calendar-cup-depth-of-field-210660_3785bd3a87.jpeg"
+            }
+          }
+        },
+        "link": {
+          "title": null,
+          "url": "routine/sample-routine"
+        },
+        "session": [
+          {
+            "title": "Mon",
+            "session": [
+              {
+                "title": "Bench Press",
+                "sets": 5,
+                "reps": 5,
+                "exercise": {
+                  "title": "Bench Press",
+                  "slug": "bench-press"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1",
+        "title": "5 x 5",
+        "body": "Do three workouts per week. Never train two days in a row or do two workouts in a day. Wait one day before doing your next workout. This gives your body time to recover, get stronger and build muscle so you can lift heavier next workout. Alternate workout A and B each time you train.\n\nMost people train Monday, Wednesday and Friday. This gives you one recovery day between each workout, and two recovery days before your next workout on Monday. What also works is to train Tuesday, Thursday, and Saturday… or Sunday, Tuesday, and Thursday.\n\nStart StrongLifts 5×5 by doing workout A. Go home, eat and sleep. Two days later do workout B. Another two days later do workout A. Your first week will look like this if you train Mo/We/Fr…\n\n\n\nRead more https://stronglifts.com/5x5/",
+        "slug": "5-x-5",
+        "media": {
+          "url": "/uploads/istockphoto-614107160-1024x1024_e8459fa052.jpeg",
+          "formats": {
+            "thumbnail": {
+              "hash": "thumbnail_istockphoto-614107160-1024x1024_e8459fa052",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 245,
+              "height": 130,
+              "size": 10.75,
+              "url": "/uploads/thumbnail_istockphoto-614107160-1024x1024_e8459fa052.jpeg"
+            },
+            "large": {
+              "hash": "large_istockphoto-614107160-1024x1024_e8459fa052",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 1000,
+              "height": 532,
+              "size": 91.41,
+              "url": "/uploads/large_istockphoto-614107160-1024x1024_e8459fa052.jpeg"
+            },
+            "medium": {
+              "hash": "medium_istockphoto-614107160-1024x1024_e8459fa052",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 750,
+              "height": 399,
+              "size": 58.94,
+              "url": "/uploads/medium_istockphoto-614107160-1024x1024_e8459fa052.jpeg"
+            },
+            "small": {
+              "hash": "small_istockphoto-614107160-1024x1024_e8459fa052",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 500,
+              "height": 266,
+              "size": 31.49,
+              "url": "/uploads/small_istockphoto-614107160-1024x1024_e8459fa052.jpeg"
+            }
+          }
+        },
+        "link": {
+          "title": "5 x 5",
+          "url": "routine/5-x-5"
+        },
+        "session": [
+          {
+            "title": "Monday Week 1",
+            "session": [
+              {
+                "title": "Barbell Squat",
+                "sets": 5,
+                "reps": 5,
+                "exercise": {
+                  "title": "Barbell Squat",
+                  "slug": "squat"
+                }
+              },
+              {
+                "title": "Bench Press",
+                "sets": 5,
+                "reps": 5,
+                "exercise": {
+                  "title": "Bench Press",
+                  "slug": "bench-press"
+                }
+              },
+              {
+                "title": "Barbell Row",
+                "sets": 5,
+                "reps": 5,
+                "exercise": {
+                  "title": "Barbell Row",
+                  "slug": "barbell-row"
+                }
+              }
+            ]
+          },
+          {
+            "title": "Wednesday Week 1",
+            "session": [
+              {
+                "title": "Squat",
+                "sets": 5,
+                "reps": 5,
+                "exercise": {
+                  "title": "Barbell Squat",
+                  "slug": "squat"
+                }
+              },
+              {
+                "title": "Overhead Press",
+                "sets": 5,
+                "reps": 5,
+                "exercise": {
+                  "title": "Barbell Curl",
+                  "slug": "barbell-curl"
+                }
+              },
+              {
+                "title": "Deadlift",
+                "sets": 5,
+                "reps": 5,
+                "exercise": {
+                  "title": "Deadlift",
+                  "slug": "deadlift"
+                }
+              }
+            ]
+          },
+          {
+            "title": "Friday Week 1",
+            "session": [
+              {
+                "title": "Squat",
+                "sets": 5,
+                "reps": 5,
+                "exercise": {
+                  "title": "Barbell Squat",
+                  "slug": "squat"
+                }
+              },
+              {
+                "title": "Bench Press",
+                "sets": 5,
+                "reps": 5,
+                "exercise": {
+                  "title": "Bench Press",
+                  "slug": "bench-press"
+                }
+              },
+              {
+                "title": "Barbell Row",
+                "sets": 5,
+                "reps": 5,
+                "exercise": {
+                  "title": "Barbell Row",
+                  "slug": "barbell-row"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

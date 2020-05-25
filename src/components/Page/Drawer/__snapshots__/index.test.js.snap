@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TemporaryDrawer matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="MuiButtonGroup-root"
+      role="group"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedHorizontal MuiButtonGroup-groupedOutlined menu-toggle"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        />
+      </button>
+      <button
+        aria-label="menu"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root Drawer__StyledMenuIcon-n5wuhv-0 iYtWpB"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,22 @@
+fragment HeroBanners on ComponentGlobalPageBanner {
+  HeroBanners {
+    title
+    id
+    media {
+      url
+      formats
+    }
+    video {
+      url
+    }
+  }
+}
+
+# fragment HeroBanner {
+#     HeroBanner {
+#     title
+#     media {
+#       url
+#     }
+#   }
+# }

@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardGroup matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthLg"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+      >
+        <div
+          class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+          data-testid="card"
+        >
+          <button
+            class="MuiButtonBase-root MuiCardActionArea-root"
+            tabindex="0"
+            type="button"
+          >
+            <div
+              class="MuiCardMedia-root styles__StyledCardMedia-sc-1vbmfog-1 gKgaUH"
+              data-testid="imageUrl"
+              style="background-image: url(http://localhost:1337/uploads/istockphoto-614107160-1024x1024_e8459fa052.jpeg);"
+              title="Contemplative Reptile"
+            />
+            <div
+              class="MuiCardContent-root"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+                data-testid="title"
+              >
+                Exercises
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+                data-testid="body"
+              >
+                Browse our exercise database with instructions, information and videos.
+              </p>
+            </div>
+            <span
+              class="MuiCardActionArea-focusHighlight"
+            />
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+          <div
+            class="MuiCardActions-root MuiCardActions-spacing"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                <a
+                  data-testid="anchor"
+                  href="/exercises"
+                >
+                  exercises
+                </a>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+      >
+        <div
+          class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+          data-testid="card"
+        >
+          <button
+            class="MuiButtonBase-root MuiCardActionArea-root"
+            tabindex="0"
+            type="button"
+          >
+            <div
+              class="MuiCardMedia-root styles__StyledCardMedia-sc-1vbmfog-1 gKgaUH"
+              data-testid="imageUrl"
+              style="background-image: url(http://localhost:1337/uploads/calendar-cup-depth-of-field-210660_3785bd3a87.jpeg);"
+              title="Contemplative Reptile"
+            />
+            <div
+              class="MuiCardContent-root"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+                data-testid="title"
+              >
+                Routines
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+                data-testid="body"
+              >
+                Browse our list of workout routines and find the right one for your goals.
+              </p>
+            </div>
+            <span
+              class="MuiCardActionArea-focusHighlight"
+            />
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+          <div
+            class="MuiCardActions-root MuiCardActions-spacing"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                <a
+                  data-testid="anchor"
+                  href="/routines"
+                >
+                  routines
+                </a>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

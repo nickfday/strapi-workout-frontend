@@ -1,0 +1,159 @@
+{
+  "data": {
+    "articles": [
+      {
+        "id": "3",
+        "title": "Sample Article",
+        "body": "Article Body",
+        "slug": "sample-article",
+        "media": {
+          "url": "/uploads/man-sitting-on-edge-facing-sunset-915972_287d08a7d4.jpeg",
+          "formats": {
+            "thumbnail": {
+              "hash": "thumbnail_man-sitting-on-edge-facing-sunset-915972_287d08a7d4",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 234,
+              "height": 156,
+              "size": 4.51,
+              "url": "/uploads/thumbnail_man-sitting-on-edge-facing-sunset-915972_287d08a7d4.jpeg"
+            },
+            "large": {
+              "hash": "large_man-sitting-on-edge-facing-sunset-915972_287d08a7d4",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 1000,
+              "height": 667,
+              "size": 48.33,
+              "url": "/uploads/large_man-sitting-on-edge-facing-sunset-915972_287d08a7d4.jpeg"
+            },
+            "medium": {
+              "hash": "medium_man-sitting-on-edge-facing-sunset-915972_287d08a7d4",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 750,
+              "height": 500,
+              "size": 29.95,
+              "url": "/uploads/medium_man-sitting-on-edge-facing-sunset-915972_287d08a7d4.jpeg"
+            },
+            "small": {
+              "hash": "small_man-sitting-on-edge-facing-sunset-915972_287d08a7d4",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 500,
+              "height": 333,
+              "size": 15.11,
+              "url": "/uploads/small_man-sitting-on-edge-facing-sunset-915972_287d08a7d4.jpeg"
+            }
+          }
+        },
+        "link": {
+          "title": "Sample Article",
+          "url": "sample-article"
+        }
+      },
+      {
+        "id": "2",
+        "title": "Dealing with overtraining",
+        "body": "Dealing with overtraining body",
+        "slug": "dealing-with-overtraining",
+        "media": {
+          "url": "/uploads/istockphoto-614107160-1024x1024_e8459fa052.jpeg",
+          "formats": {
+            "thumbnail": {
+              "hash": "thumbnail_istockphoto-614107160-1024x1024_e8459fa052",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 245,
+              "height": 130,
+              "size": 10.75,
+              "url": "/uploads/thumbnail_istockphoto-614107160-1024x1024_e8459fa052.jpeg"
+            },
+            "large": {
+              "hash": "large_istockphoto-614107160-1024x1024_e8459fa052",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 1000,
+              "height": 532,
+              "size": 91.41,
+              "url": "/uploads/large_istockphoto-614107160-1024x1024_e8459fa052.jpeg"
+            },
+            "medium": {
+              "hash": "medium_istockphoto-614107160-1024x1024_e8459fa052",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 750,
+              "height": 399,
+              "size": 58.94,
+              "url": "/uploads/medium_istockphoto-614107160-1024x1024_e8459fa052.jpeg"
+            },
+            "small": {
+              "hash": "small_istockphoto-614107160-1024x1024_e8459fa052",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 500,
+              "height": 266,
+              "size": 31.49,
+              "url": "/uploads/small_istockphoto-614107160-1024x1024_e8459fa052.jpeg"
+            }
+          }
+        },
+        "link": {
+          "title": "Dealing-with-overtraining",
+          "url": "dealing-with-overtraining"
+        }
+      },
+      {
+        "id": "1",
+        "title": "The benefits of exercise",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "slug": "the-benefits-of-exercise",
+        "media": {
+          "url": "/uploads/calendar-cup-depth-of-field-210660_3785bd3a87.jpeg",
+          "formats": {
+            "thumbnail": {
+              "hash": "thumbnail_calendar-cup-depth-of-field-210660_3785bd3a87",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 234,
+              "height": 156,
+              "size": 5.5,
+              "url": "/uploads/thumbnail_calendar-cup-depth-of-field-210660_3785bd3a87.jpeg"
+            },
+            "large": {
+              "hash": "large_calendar-cup-depth-of-field-210660_3785bd3a87",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 1000,
+              "height": 666,
+              "size": 46.48,
+              "url": "/uploads/large_calendar-cup-depth-of-field-210660_3785bd3a87.jpeg"
+            },
+            "medium": {
+              "hash": "medium_calendar-cup-depth-of-field-210660_3785bd3a87",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 750,
+              "height": 500,
+              "size": 29.31,
+              "url": "/uploads/medium_calendar-cup-depth-of-field-210660_3785bd3a87.jpeg"
+            },
+            "small": {
+              "hash": "small_calendar-cup-depth-of-field-210660_3785bd3a87",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "width": 500,
+              "height": 333,
+              "size": 15.96,
+              "url": "/uploads/small_calendar-cup-depth-of-field-210660_3785bd3a87.jpeg"
+            }
+          }
+        },
+        "link": {
+          "title": "The benefits of exercise",
+          "url": "the-benefits-of-exercise"
+        }
+      }
+    ]
+  }
+}

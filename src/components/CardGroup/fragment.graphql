@@ -1,0 +1,14 @@
+fragment Cards on ComponentGlobalComponentBuilder {
+  cards {
+    id
+    title
+    body
+    media {
+      url
+    }
+    link {
+      title
+      url
+    }
+  }
+}
