@@ -27,7 +27,7 @@ const ArticleDetail: React.FC<ArticleDataItem> = ({ title, body, media }) => {
           ></Breadcrumb>
         </Grid>
       </Grid>
-      <StyledImage src={`${process.env.API_URL}${media.formats.small.url}`} />
+      <StyledImage src={media.formats.small.url} />
       <ReactMarkdown source={body} />
     </Container>
   );

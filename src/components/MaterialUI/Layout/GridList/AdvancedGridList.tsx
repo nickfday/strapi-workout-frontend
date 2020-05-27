@@ -51,10 +51,7 @@ const MaterialAdvancedGridList: React.FC<MaterialAdvancedGridListProps> = (
             rows={tile.featured ? 2 : 1}
           >
             {tile.media && (
-              <img
-                src={`${process.env.API_URL}${tile.media.formats.medium.url}`}
-                alt={tile.title}
-              />
+              <img src={tile.media.formats.medium.url} alt={tile.title} />
             )}
             <Link url={`${tile.link.url}`}>
               <StyledGridListTileBar title={tile.title} />

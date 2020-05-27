@@ -13,7 +13,14 @@ const fragmentMatcher = new IntrospectionFragmentMatcher({
 });
 
 // Update the GraphQL endpoint to any instance of GraphQL that you like
-const GRAPHQL_URL = 'http://localhost:1337/graphql';
+// const GRAPHQL_URL = process.env
+//   ? process.env.API_GRAPHQL_URL
+//   : 'https://strapi-workout-backend.herokuapp.com/graphql';
+
+const GRAPHQL_URL = 'https://strapi-workout-backend.herokuapp.com/graphql';
+
+// Update the GraphQL endpoint to any instance of GraphQL that you like
+//const GRAPHQL_URL = 'http://localhost:1337/graphql';
 
 const link = createHttpLink({
   fetch, // Switches between unfetch & node-fetch for client & server.
@@ -31,5 +38,5 @@ export default withApollo(
       cache: new InMemoryCache({ fragmentMatcher })
         //  rehydrate the cache using the initial data passed from the server:
         .restore(initialState || {}),
-    })
+    }),
 );

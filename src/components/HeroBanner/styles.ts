@@ -16,7 +16,7 @@ const StyledWrapper = styled.div`
 
 const StyledBanner = styled('div')<{ url: string }>`
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(${({ url }) => 'http://localhost:1337' + url});
+    url(${({ url }) => url});
   background-size: cover;
   height: 100%;
   width: 100%;
