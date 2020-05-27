@@ -7,6 +7,7 @@
     "dev": "next dev -p 1000 && build-fragment",
     "build": "next build",
     "build-fragment": "node src/schemaQuery.js",
+    "heroku-postbuild": "next build",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "precommit": "yarn lint && yarn test",
     "prepush": "yarn lint && yarn test",
