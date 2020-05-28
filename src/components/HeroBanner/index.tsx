@@ -54,8 +54,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({ title, media, video }) => {
   } else {
     return (
       <Box mb={3} data-testid="heroBannerVideo">
-        {/* <video src={`http://localhost:1337${video.url}`} /> */}
-        <StyledVideo src={`${process.env.API_URL}${video.url}`} />
+        <StyledVideo src={video.url} />
       </Box>
     );
   }
