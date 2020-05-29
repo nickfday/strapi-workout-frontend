@@ -7,7 +7,7 @@ import gql from 'graphql-tag';
 
 const CtaWrapper = styled('div')<{ image: string }>`
   text-align: center;
-  background: url(${({ image }) => process.env.API_URL + image}) no-repeat;
+  background: url(${({ image }) => image}) no-repeat;
   background-size: cover;
   min-height: 400px;
   width: 100%;
