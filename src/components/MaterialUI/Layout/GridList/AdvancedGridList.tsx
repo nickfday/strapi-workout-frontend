@@ -14,7 +14,7 @@ const StyledWrapper = styled.div`
 
 const StyledGridList = styled(GridList)`
   width: 1240;
-  height: 400;
+  height: 200;
   transform: 'translateZ(0)';
 `;
 

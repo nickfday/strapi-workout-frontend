@@ -1,27 +1,32 @@
 import React from 'react';
-import { Container, Grid } from '@material-ui/core';
+import { Box, Container, Grid } from '@material-ui/core';
 import styled from 'styled-components';
+import ReactMarkdown from 'react-markdown';
 
 import { MediaProps } from 'types/media';
 import gql from 'graphql-tag';
 
-const CtaWrapper = styled('div')<{ image: string }>`
-  text-align: center;
+const StyledCtaWrapper = styled('div')<{
+  image: string;
+  backgroundPositionY: number;
+}>`
   background: url(${({ image }) => image}) no-repeat;
   background-size: cover;
-  min-height: 400px;
+  min-height: 350px;
   width: 100%;
-  display: flex;
+  background-position-y: ${(props) =>
+    props.backgroundPositionY + 'px' || '0px'};
 `;
 
-const TextArea = styled.div`
+const StyledTextArea = styled.div`
   color: #fff;
   background: rgba(0, 0, 0, 0.5);
   padding: 20px;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 400px;
+  min-height: 350px;
+  width: 60%;
+  font-size: 16px;
+  align-items: center;
 `;
 
 export interface CtaBannerProps {
@@ -33,6 +38,8 @@ interface CtaBannerSingleProps {
   id: number;
   body: string;
   media: MediaProps;
+  backgroundPositionY: number;
+  backgroundPositionX: number;
 }
 
 const CTABANNER_FRAGMENT = gql`
@@ -49,24 +56,29 @@ const CTABANNER_FRAGMENT = gql`
         title
         url
       }
+      backgroundPositionX
+      backgroundPositionY
     }
   }
 `;
 
 const CtaBanner: React.FC<CtaBannerProps> = (props) => {
+  console.log(props);
   return (
-    <Container>
-      <Grid container spacing={3}>
-        {props.ctaBanners.map((item) => {
-          item;
-          return (
-            <Grid item xs={12} key={item.id}>
-              <CtaBannerSingle {...item} />
-            </Grid>
-          );
-        })}
-      </Grid>
-    </Container>
+    <Box mt={2}>
+      <Container>
+        <Grid container spacing={3}>
+          {props.ctaBanners.map((item) => {
+            console.log(item);
+            return (
+              <Grid item xs={12} key={item.id}>
+                <CtaBannerSingle {...item} />
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 
@@ -74,14 +86,20 @@ const CtaBannerSingle: React.FC<CtaBannerSingleProps> = ({
   title,
   body,
   media,
+  backgroundPositionY,
 }) => {
   return (
-    <CtaWrapper image={media.formats.large.url}>
-      <TextArea>
-        <h1>{title}</h1>
-        <p>{body}</p>
-      </TextArea>
-    </CtaWrapper>
+    <StyledCtaWrapper
+      image={media.formats.large.url}
+      backgroundPositionY={backgroundPositionY}
+    >
+      <StyledTextArea>
+        {title && <h1>{title}</h1>}
+        <div>
+          <ReactMarkdown source={body} />
+        </div>
+      </StyledTextArea>
+    </StyledCtaWrapper>
   );
 };
 
