@@ -25,6 +25,9 @@ const PAGE_QUERY = gql`
         formats
         url
       }
+      videoMedia {
+        url
+      }
       variationExercise {
         title
         slug
