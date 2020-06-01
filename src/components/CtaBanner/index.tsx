@@ -14,8 +14,11 @@ const StyledCtaWrapper = styled('div')<{
   background-size: cover;
   min-height: 350px;
   width: 100%;
-  background-position-y: ${(props) =>
-    props.backgroundPositionY + 'px' || '0px'};
+
+  @media (min-width: 830px) {
+    background-position-y: ${(props) =>
+      props.backgroundPositionY + 'px' || '0px'};
+  }
 `;
 
 const StyledTextArea = styled.div`

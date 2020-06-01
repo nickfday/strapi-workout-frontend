@@ -14,6 +14,7 @@ const EXERICSE_QUERY = gql`
       }
       equipment
       slug
+      type
     }
   }
 `;

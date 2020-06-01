@@ -118,7 +118,7 @@ const TemporaryDrawer = (items) => {
               {list(anchor)}
             </Drawer>
           </StyledHeadingContainer>
-          <StyledHeading>Everybody Active</StyledHeading>
+          <StyledHeading>Workout Log</StyledHeading>
         </React.Fragment>
       ))}
     </div>
