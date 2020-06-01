@@ -35,6 +35,9 @@ interface ExerciseSingleProps {
   secondaryMuscle: SecondaryMuscleProps[];
   type: string;
   variationExercise: ExerciseSingleProps[];
+  videoMedia: {
+    url: string;
+  };
 }
 
 interface SecondaryMuscleProps {
@@ -81,6 +84,7 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
   videoUrl,
   type,
   variationExercise,
+  videoMedia,
 }) => {
   console.log(title);
   return (
@@ -102,7 +106,11 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
       <Grid container spacing={2}>
         <Grid item xs={12} md={9}>
           <StyledVideo>
-            <iframe allowFullScreen src={videoUrl} title={`${title}`} />
+            <iframe
+              allowFullScreen
+              src={videoMedia ? videoMedia.url : videoUrl}
+              title={`${title}`}
+            />
           </StyledVideo>
         </Grid>
 

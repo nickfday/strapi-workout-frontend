@@ -3,8 +3,10 @@ import clsx from 'clsx';
 import {
   Button,
   ButtonGroup,
+  Container,
   Drawer,
   List,
+  Grid,
   Divider,
   IconButton,
   makeStyles,
@@ -19,6 +21,14 @@ import styled, { css } from 'styled-components';
 
 const StyledMenuIcon = styled(MenuIcon)`
   color: #fff;
+`;
+
+const StyledHeadingContainer = styled.div`
+  float: left;
+`;
+
+const StyledHeading = styled.h1`
+  float: left;
 `;
 
 const useStyles = makeStyles({
@@ -89,23 +99,26 @@ const TemporaryDrawer = (items) => {
     <div>
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <ButtonGroup>
-            <Button
-              onClick={toggleDrawer(anchor, true)}
-              className="menu-toggle"
+          <StyledHeadingContainer>
+            <ButtonGroup>
+              <Button
+                onClick={toggleDrawer(anchor, true)}
+                className="menu-toggle"
+              >
+                <IconButton edge="start" color="inherit" aria-label="menu">
+                  <StyledMenuIcon />
+                </IconButton>
+              </Button>
+            </ButtonGroup>
+            <Drawer
+              anchor={anchor}
+              open={state[anchor]}
+              onClose={toggleDrawer(anchor, false)}
             >
-              <IconButton edge="start" color="inherit" aria-label="menu">
-                <StyledMenuIcon />
-              </IconButton>
-            </Button>
-          </ButtonGroup>
-          <Drawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-          >
-            {list(anchor)}
-          </Drawer>
+              {list(anchor)}
+            </Drawer>
+          </StyledHeadingContainer>
+          <StyledHeading>Workout Log</StyledHeading>
         </React.Fragment>
       ))}
     </div>

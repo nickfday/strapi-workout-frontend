@@ -48,9 +48,7 @@ const RoutineDetail: React.FC<RoutineDataItem> = ({
         </Grid>
         <Grid md={4}>
           <Box mt={2}>
-            <StyledImage
-              src={`${process.env.API_URL}${media.formats.small.url}`}
-            />
+            <StyledImage src={media.formats.small.url} />
           </Box>
         </Grid>
 
