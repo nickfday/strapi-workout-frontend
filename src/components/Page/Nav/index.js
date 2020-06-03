@@ -20,7 +20,7 @@ const Nav = (items) => {
     <Box component="nav">
       <StyledAppBar position="static" color="primary">
         <Container>
-          <Grid container spacing={3}>
+          <Grid container spacing={3} alignItems="center">
             <Hidden mdUp>
               <Grid item>
                 <Drawer {...items} />
