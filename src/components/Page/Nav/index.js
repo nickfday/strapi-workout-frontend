@@ -18,9 +18,7 @@ const Nav = (items) => {
     <Box component="nav">
       <StyledAppBar position="static" color="primary">
         <Container>
-          <Toolbar variant="dense">
-            <Drawer {...items} />
-          </Toolbar>
+          <Drawer {...items} />
         </Container>
       </StyledAppBar>
     </Box>

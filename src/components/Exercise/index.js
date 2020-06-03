@@ -33,7 +33,7 @@ const Exercise = ({ exercises }) => {
       </Link>,
       item.type.replace(/_/g, ' '),
       item.primaryMuscle.title,
-      item.equipment,
+      item.equipment ? item.equipment.replace(/_/g, ' ') : null,
     ];
   });
 
