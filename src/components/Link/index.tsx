@@ -13,7 +13,7 @@ declare global {
 }
 
 const Link: React.FC<LinkProps> = ({ children, url }) => {
-  if (typeof window.next !== 'undefined') {
+  if (typeof window !== 'undefined') {
     return (
       <NextLink href={url}>
         <a data-testid="anchor">{children}</a>

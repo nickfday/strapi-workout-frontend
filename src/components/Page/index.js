@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import styled, { injectGlobal, createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+import GlobalStyle from './globalStyle';
 import Header from './Header';
 import Meta from './Meta';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -15,14 +16,6 @@ const Inner = styled.div`
   max-width: ${(props) => props.theme.maxWidth};
   margin: 0 auto;
   padding: 2rem;
-`;
-
-const GlobalStyle = createGlobalStyle`
-  a {
-    font-size: inherit;
-    text-decoration: none;
-    color: inherit;
-  }
 `;
 
 export default class Page extends Component {

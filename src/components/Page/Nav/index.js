@@ -7,18 +7,36 @@ import {
   StyledAppBar,
 } from './styles';
 
-import { Container, Grid } from '@material-ui/core';
+import { Container, Grid, Hidden } from '@material-ui/core';
 
 import { Box, Toolbar } from '@material-ui/core';
 
+import DesktopNav from './desktopNav';
 import Drawer from '../Drawer';
+import Logo from './logo';
 
 const Nav = (items) => {
   return (
     <Box component="nav">
       <StyledAppBar position="static" color="primary">
         <Container>
-          <Drawer {...items} />
+          <Grid container spacing={3}>
+            <Hidden mdUp>
+              <Grid item>
+                <Drawer {...items} />
+              </Grid>
+            </Hidden>
+
+            <Grid item>
+              <Logo />
+            </Grid>
+
+            <Hidden smDown>
+              <Grid item>
+                <DesktopNav {...items} />
+              </Grid>
+            </Hidden>
+          </Grid>
         </Container>
       </StyledAppBar>
     </Box>

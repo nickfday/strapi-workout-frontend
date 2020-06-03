@@ -41,7 +41,6 @@ const useStyles = makeStyles({
 });
 
 const TemporaryDrawer = (items) => {
-  items;
   const classes = useStyles();
   const [state, setState] = React.useState({
     top: false,
@@ -118,7 +117,7 @@ const TemporaryDrawer = (items) => {
               {list(anchor)}
             </Drawer>
           </StyledHeadingContainer>
-          <StyledHeading>Workout Log</StyledHeading>
+          {/* <StyledHeading>Workout Log</StyledHeading> */}
         </React.Fragment>
       ))}
     </div>
