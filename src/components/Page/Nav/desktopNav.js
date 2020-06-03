@@ -16,7 +16,7 @@ const StyledBox = styled(Box)`
 const DesktopNav = (items) => {
   return (
     <StyledList>
-      {items.data.NavData.map((item) => (
+      {items.data.NavData.slice(1).map((item) => (
         <StyledBox key={item.title}>
           <Link {...item.link} key={item.title}>
             <ListItem button key={item.title}>
