@@ -11,11 +11,11 @@ const Homepage = (componentBuilder) => {
   );
 };
 
-export async function getStaticProps({ preview = null }) {
-  const componentBuilder = (await getComponentBuilder(preview)) || [];
+export async function getStaticProps({ id = 1 }) {
+  const componentBuilder = (await getComponentBuilder(id)) || [];
   console.log(componentBuilder);
   return {
-    props: { componentBuilder, preview },
+    props: { componentBuilder, id },
   };
 }
 
