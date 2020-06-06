@@ -1,25 +1,21 @@
 import React from 'react';
-import ComponentBuilderPage from 'components/ComponentBuilder/page';
-import { ArticleTeaserPage } from 'components/Article/page';
-import { MaterialAdvancedGridList } from 'components/MaterialUI/Layout/GridList/AdvancedGridList';
-import { getExercises } from '../../lib/api';
+import ComponentBuilder from 'components/ComponentBuilder';
+import { getExercises, getComponentBuilder } from '../../lib/api';
 
-const Homepage = (allExercises) => {
-  console.log(allExercises);
+const Homepage = (componentBuilder) => {
+  console.log(componentBuilder.componentBuilder);
   return (
     <>
-      {/* <ComponentBuilderPage id={1} />
-      <ArticleTeaserPage /> */}
-      Test
+      <ComponentBuilder {...componentBuilder.componentBuilder} />
     </>
   );
 };
 
 export async function getStaticProps({ preview = null }) {
-  const allExercises = (await getExercises(preview)) || [];
-  console.log(allExercises);
+  const componentBuilder = (await getComponentBuilder(preview)) || [];
+  console.log(componentBuilder);
   return {
-    props: { allExercises, preview },
+    props: { componentBuilder, preview },
   };
 }
 
