@@ -10,7 +10,6 @@ const Page = (articleDetail) => {
   // if (!router.isFallback && !post?.slug) {
   //   return <ErrorPage statusCode={404} />;
   // }
-  console.log(articleDetail.articleDetail[0]);
 
   return (
     <>
