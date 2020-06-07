@@ -12,12 +12,12 @@
 
 // export default Page;
 
-import React from "react";
-import { useRouter } from "next/router";
-import ErrorPage from "next/error";
-import ExerciseSingle from "components/Exercise/ExerciseSingle";
+import React from 'react';
+import { useRouter } from 'next/router';
+import ErrorPage from 'next/error';
+import ExerciseSingle from 'components/Exercise/ExerciseSingle';
 
-import { getExerciseDetail, getAllExercisesWithSlug } from "../../../lib/api";
+import { getExerciseDetail, getAllExercisesWithSlug } from '../../../lib/api';
 
 const Page = (exerciseDetail) => {
   const router = useRouter();
@@ -45,14 +45,6 @@ export async function getStaticProps({ params, preview = null }) {
     },
   };
 }
-
-// export async function getStaticProps({ params }) {
-//   const exerciseDetail = (await getExerciseDetail(params.slug)) || [];
-//   console.log(exerciseDetail);
-//   return {
-//     props: { exerciseDetail },
-//   };
-// }
 
 export async function getStaticPaths() {
   const allExercises = await getAllExercisesWithSlug();
