@@ -1,16 +1,4 @@
-// import React from 'react';
-// import ComponentBuilderPage from 'components/ComponentBuilder/page';
-
-// const Page = (props) => {
-//   return <ComponentBuilderPage id={2} />;
-// };
-
-// export default Page;
-
 import React from 'react';
-import ComponentBuilderPage from 'components/ComponentBuilder/page';
-import { ArticleTeaserPage } from 'components/Article/page';
-import { MaterialAdvancedGridList } from 'components/MaterialUI/Layout/GridList/AdvancedGridList';
 import { getExercises } from '../../lib/api';
 import Exercise from 'components/Exercise';
 
