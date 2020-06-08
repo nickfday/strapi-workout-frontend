@@ -4,6 +4,7 @@ import NextLink from 'next/link';
 export interface LinkProps {
   url: string;
   title?: string;
+  noUnderline?: boolean;
 }
 
 declare global {
@@ -12,11 +13,13 @@ declare global {
   }
 }
 
-const Link: React.FC<LinkProps> = ({ children, url }) => {
+const Link: React.FC<LinkProps> = ({ children, url, noUnderline }) => {
   if (typeof window !== 'undefined') {
     return (
       <NextLink href={url}>
-        <a data-testid="anchor">{children}</a>
+        <a className={noUnderline ? 'no-underline' : ''} data-testid="anchor">
+          {children}
+        </a>
       </NextLink>
     );
   } else {
