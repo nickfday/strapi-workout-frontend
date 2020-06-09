@@ -1,13 +1,9 @@
-import React from 'react';
-import { getExercises } from '../../lib/api';
-import Exercise from 'components/Exercise';
+import React from "react";
+import { getExercises } from "../../lib/api";
+import Exercise from "components/Exercise";
 
-const Exercises = (allExercises) => {
-  const exercises = {
-    exercises: allExercises,
-  };
-  console.log(...exercises.exercises.allExercises);
-  return <Exercise exercises={exercises.exercises.allExercises} />;
+const Exercises = ({ allExercises }) => {
+  return <Exercise exercises={allExercises} />;
 };
 
 export async function getStaticProps({ preview = null }) {
