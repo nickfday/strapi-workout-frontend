@@ -4,9 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
 import { useTheme } from '@material-ui/core/styles';
 
-export const StyledAppBar = styled(AppBar)`
-  background-color: red;
-`;
+export const StyledAppBar = styled(AppBar)``;
 
 export const Wrapper = styled.div`
   flex-grow: 1;
