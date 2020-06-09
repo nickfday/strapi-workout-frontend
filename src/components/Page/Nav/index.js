@@ -17,7 +17,7 @@ import Logo from './logo';
 
 const Nav = (items) => {
   return (
-    <Box mb={5}>
+    <Box component="nav" mb={5}>
       <StyledAppBar position="static" color="primary">
         <Container>
           <Grid container spacing={3} alignItems="center">
