@@ -8,6 +8,7 @@ module.exports = {
           {
             ssr: true,
             displayName: true,
+            preprocess: false,
           },
         ],
       ],
@@ -23,7 +24,8 @@ module.exports = {
           'babel-plugin-styled-components',
           {
             ssr: true,
-            displayName: false,
+            displayName: true,
+            preprocess: false,
           },
         ],
       ],
