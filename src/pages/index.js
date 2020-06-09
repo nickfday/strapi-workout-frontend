@@ -1,15 +1,23 @@
 import React from 'react';
-import ComponentBuilderPage from 'components/ComponentBuilder/page';
-import { ArticleTeaserPage } from 'components/Article/page';
-import { MaterialAdvancedGridList } from 'components/MaterialUI/Layout/GridList/AdvancedGridList';
+import ComponentBuilder from 'components/ComponentBuilder';
+import { ArticleTeaser } from 'components/Article/teaser';
 
-const Homepage = () => {
+import { getHomepage } from '../../lib/api';
+
+const Homepage = ({ homePageData }) => {
   return (
     <>
-      <ComponentBuilderPage id={1} />
-      <ArticleTeaserPage />
+      <ComponentBuilder {...homePageData.page} />{' '}
+      <ArticleTeaser {...homePageData} />
     </>
   );
 };
+
+export async function getStaticProps({ id = 1 }) {
+  const homePageData = (await getHomepage(id)) || [];
+  return {
+    props: { homePageData },
+  };
+}
 
 export default Homepage;

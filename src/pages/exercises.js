@@ -1,8 +1,17 @@
-import React from 'react';
-import ComponentBuilderPage from 'components/ComponentBuilder/page';
+import React from "react";
+import { getExercises } from "../../lib/api";
+import Exercise from "components/Exercise";
 
-const Page = (props) => {
-  return <ComponentBuilderPage id={2} />;
+const Exercises = ({ allExercises }) => {
+  return <Exercise exercises={allExercises} />;
 };
 
-export default Page;
+export async function getStaticProps({ preview = null }) {
+  const allExercises = (await getExercises(preview)) || [];
+  console.log(allExercises);
+  return {
+    props: { allExercises, preview },
+  };
+}
+
+export default Exercises;

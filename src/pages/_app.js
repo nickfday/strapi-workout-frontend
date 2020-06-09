@@ -1,24 +1,20 @@
+import NextApp from 'next/app';
 import React from 'react';
-import App from 'next/app';
-import { ApolloProvider } from '@apollo/react-hooks';
 import Page from '../components/Page';
-// import { withApollo } from '../../lib/apollo';
 
-import withData from '../util/apollo-client';
-
-class MyApp extends App {
+export default class App extends NextApp {
+  // remove it here
+  componentDidMount() {
+    // const jssStyles = document.querySelector('#jss-server-side');
+    // if (jssStyles && jssStyles.parentNode)
+    //   jssStyles.parentNode.removeChild(jssStyles);
+  }
   render() {
-    const { Component, pageProps, apollo } = this.props;
+    const { Component, pageProps } = this.props;
     return (
-      <ApolloProvider client={apollo}>
-        <Page>
-          <Component {...pageProps} />
-        </Page>
-      </ApolloProvider>
+      <Page>
+        <Component {...pageProps} />
+      </Page>
     );
   }
 }
-
-// Wraps all components in the tree with the data provider
-export default withData(MyApp, { ssr: false });
-// export default withApollo({ ssr: true })(MyApp);

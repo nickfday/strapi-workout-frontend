@@ -5,7 +5,7 @@ import AppBar from '@material-ui/core/AppBar';
 import { useTheme } from '@material-ui/core/styles';
 
 export const StyledAppBar = styled(AppBar)`
-  background-color: red;
+  height: 67px;
 `;
 
 export const Wrapper = styled.div`
