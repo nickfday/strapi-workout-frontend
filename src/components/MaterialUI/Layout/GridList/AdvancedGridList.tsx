@@ -7,14 +7,14 @@ import { MediaProps } from 'types/media';
 import Link, { LinkProps } from 'components/Link';
 
 const StyledWrapper = styled.div`
-   display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
+    display: 'flex',
+    flex-wrap: 'wrap',
+    justify-content: 'space-around',
 `;
 
 const StyledGridList = styled(GridList)`
   width: 1240;
-  height: 200;
+  height: 250;
   transform: 'translateZ(0)';
 `;
 
@@ -43,12 +43,12 @@ const MaterialAdvancedGridList: React.FC<MaterialAdvancedGridListProps> = (
   console.log(props);
   return (
     <StyledWrapper>
-      <StyledGridList cellHeight={200} spacing={1}>
+      <StyledGridList cellHeight={250} spacing={1}>
         {props.items.map((tile) => (
           <GridListTile
             key={tile.title}
             cols={tile.featured ? 2 : 1}
-            rows={tile.featured ? 2 : 1}
+            className={tile.featured ? 'featured' : ''}
           >
             {tile.media && (
               <img src={tile.media.formats.medium.url} alt={tile.title} />
