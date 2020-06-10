@@ -14,7 +14,11 @@ declare global {
   }
 }
 
-const StyledSpan = styled.span`
+interface StyledSpanProps {
+  noUnderline: boolean;
+}
+
+const StyledSpan = styled.span<StyledSpanProps>`
   text-decoration: ${({ noUnderline }) => (noUnderline ? 'none' : 'underline')};
   cursor: pointer;
   font-size: inherit;
