@@ -15,7 +15,7 @@ declare global {
 }
 
 interface StyledSpanProps {
-  noUnderline: boolean;
+  noUnderline?: boolean;
 }
 
 const StyledSpan = styled.span<StyledSpanProps>`
