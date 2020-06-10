@@ -18,7 +18,7 @@ const DesktopNav = (items) => {
     <StyledList>
       {items.data.NavData.slice(1).map((item) => (
         <StyledBox key={item.title}>
-          <Link {...item.link} key={item.title}>
+          <Link {...item.link} key={item.title} noUnderline>
             <ListItem button key={item.title}>
               <ListItemText primary={item.title}>{item.title}</ListItemText>
             </ListItem>
