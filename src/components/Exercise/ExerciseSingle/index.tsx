@@ -30,7 +30,7 @@ interface ExerciseSingleProps {
   };
   videoUrl: string;
   image: MediaProps;
-  equipment: string;
+  equipment: EquipmentProps;
   body: string;
   secondaryMuscle: SecondaryMuscleProps[];
   type: string;
@@ -38,6 +38,10 @@ interface ExerciseSingleProps {
   videoMedia: {
     url: string;
   };
+}
+
+interface EquipmentProps {
+  title: string;
 }
 
 interface SecondaryMuscleProps {
@@ -87,6 +91,7 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
   videoMedia,
 }) => {
   console.log(title);
+  console.log(equipment);
   return (
     <Container>
       <Grid container spacing={2} justify="space-between">
@@ -137,13 +142,17 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
           />
           <SummaryList
             primaryText="Equipment"
-            secondaryText={equipment}
+            secondaryText={equipment.map((equipmeentItem, index) => {
+              return index < equipment.length - 1
+                ? `${equipmeentItem.title}, `
+                : equipmeentItem.title;
+            })}
             icon={<SportsHockey />}
           />
           <SummaryList
             primaryText="Variation"
             secondaryText={variationExercise.map((exercise, index) => {
-              return index < secondaryMuscle.length - 1
+              return index < variationExercise.length - 1
                 ? `${exercise.title}, `
                 : exercise.title;
             })}

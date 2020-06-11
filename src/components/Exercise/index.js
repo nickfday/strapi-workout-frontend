@@ -33,7 +33,14 @@ const Exercise = ({ exercises }) => {
       </Link>,
       item.type.replace(/_/g, ' '),
       item.primaryMuscle.title,
-      item.equipment ? item.equipment.replace(/_/g, ' ') : null,
+      item.equipment.map((equipmentItem, index) => {
+        console.log(item.equipment);
+        console.log(index);
+        return index < item.equipment - 1
+          ? `${equipmentItem.title},`
+          : equipmentItem.title;
+      }),
+      // item.equipment ? item.equipment.replace(/_/g, ' ') : null,
     ];
   });
 
