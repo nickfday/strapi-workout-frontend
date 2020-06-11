@@ -117,8 +117,6 @@ const dynamicRows = () => {
   });
 };
 
-console.log(dynamicRows());
-
 storiesOf('Material UI/Data Display/Table', module).add(
   'Alternate Table',
   () => <CustomizedTables headers={headers} rows={dynamicRows()} />,

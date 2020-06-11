@@ -13,7 +13,6 @@ import { RoutineList } from 'components/Routine/list';
 import { getComponentBuilder, getRoutines } from '../../lib/api';
 
 const Page = (routinesList) => {
-  console.log(routinesList);
   return (
     <>
       <RoutineList routines={routinesList.routinesList} />
@@ -23,7 +22,7 @@ const Page = (routinesList) => {
 
 export async function getStaticProps({ id = 1 }) {
   const routinesList = (await getRoutines()) || [];
-  console.log(routinesList);
+
   return {
     props: { routinesList },
   };

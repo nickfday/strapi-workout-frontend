@@ -23,8 +23,6 @@ const RoutineDetail: React.FC<RoutineDataItem> = ({
 
   const dynamicRows = (sesh: any) => {
     return sesh.session.map((item: any) => {
-      console.log(item);
-
       return [
         <Link key={item.id} url={`/exercise/${item.exercise.slug}`}>
           {item.exercise.title}

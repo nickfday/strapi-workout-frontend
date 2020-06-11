@@ -65,8 +65,6 @@ interface RowItemProps {
 }
 
 const CustomizedTables: React.FC<CustomizedTablesProps> = (props) => {
-  console.log(props);
-
   return (
     <TableContainer component={Paper}>
       <Table aria-label="customized table">
@@ -79,7 +77,6 @@ const CustomizedTables: React.FC<CustomizedTablesProps> = (props) => {
         </StyledTableHead>
         <TableBody>
           {props.rows.map((row, index) => {
-            console.log(row);
             return (
               <StyledTableRow key={index}>
                 {row.map((cell: string | number, index: number) => {

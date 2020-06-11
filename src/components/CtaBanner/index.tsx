@@ -66,13 +66,11 @@ const CTABANNER_FRAGMENT = gql`
 `;
 
 const CtaBanner: React.FC<CtaBannerProps> = (props) => {
-  console.log(props);
   return (
     <Box mb={5}>
       <Container>
         <Grid container spacing={3}>
           {props.ctaBanners.map((item) => {
-            console.log(item);
             return (
               <Grid item xs={12} key={item.id}>
                 <CtaBannerSingle {...item} />

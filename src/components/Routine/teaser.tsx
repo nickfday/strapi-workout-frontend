@@ -9,7 +9,6 @@ const RoutineTeaser: React.FC<RoutineTypes> = ({ routines }) => {
   // set first item as featured
   routines[0]['featured'] = true;
 
-  console.log(routines);
   return (
     <Container data-testid="routineTeaser">
       <MaterialAdvancedGridList items={routines} />

@@ -32,7 +32,6 @@ interface ExerciseRows {
 }
 
 const SimpleTable: React.FC<Props> = ({ items }) => {
-  console.log(items);
   const classes = useStyles();
   return (
     <Container>

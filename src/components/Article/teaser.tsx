@@ -9,7 +9,6 @@ const ArticleTeaser: React.FC<ArticleTypes> = ({ articles }) => {
   // set first item as featured
   articles[0]['featured'] = true;
 
-  console.log(articles);
   return (
     <Container data-testid="articleTeaser">
       <Box mb={2}>

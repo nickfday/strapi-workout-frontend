@@ -24,7 +24,6 @@ background:
 `;
 
 const MaterialAdvancedGridList = (props) => {
-  console.log(props);
   return (
     <StyledWrapper>
       <StyledGridList cellHeight={200} spacing={1}>

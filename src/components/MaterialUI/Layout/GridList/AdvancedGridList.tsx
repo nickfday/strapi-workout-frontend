@@ -40,7 +40,6 @@ interface TileDataItem {
 const MaterialAdvancedGridList: React.FC<MaterialAdvancedGridListProps> = (
   props,
 ) => {
-  console.log(props);
   return (
     <StyledWrapper>
       <StyledGridList cellHeight={250} spacing={1}>

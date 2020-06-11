@@ -11,8 +11,7 @@ const Page = (routineDetail) => {
   //   return <ErrorPage statusCode={404} />;
   // }
 
-  console.log(routineDetail);
-  // console.log(routineDetail.routineDetail[0]);
+  //
 
   return (
     <>

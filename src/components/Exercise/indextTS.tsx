@@ -19,7 +19,6 @@ interface ExerciseRows {
 
 const Exercise: React.FC<ExerciseProps> = ({ exercises }) => {
   const headers = ['Exercise', 'Sets', 'Reps'];
-  console.log(headers);
 
   // const dynamicRows = (sesh: any) => {
   //   return sesh.session.map((item: any) => {
@@ -27,7 +26,6 @@ const Exercise: React.FC<ExerciseProps> = ({ exercises }) => {
   //   });
   // };
 
-  console.log(exercises);
   return (
     <Container>
       <h1>Exercises</h1>

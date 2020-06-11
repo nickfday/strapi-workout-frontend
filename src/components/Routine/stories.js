@@ -6,8 +6,6 @@ import { RoutineTeaser } from './teaser';
 import { RoutineDetail } from './detail';
 import * as mockData from './mockData.json';
 
-console.log(mockData);
-
 storiesOf('Routine', module).add('Routine List', () => (
   <RoutineList {...mockData.data} />
 ));

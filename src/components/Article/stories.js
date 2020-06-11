@@ -6,8 +6,6 @@ import { ArticleTeaser } from './teaser';
 import { ArticleDetail } from './detail';
 import * as mockData from './mockData.json';
 
-console.log(mockData);
-
 storiesOf('Article', module).add('Article List', () => (
   <ArticleList {...mockData.data} />
 ));

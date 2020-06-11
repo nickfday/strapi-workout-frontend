@@ -294,6 +294,4 @@ const exercise = {
   ],
 };
 
-console.log(exercise);
-
 storiesOf('Exercise', module).add('default', () => <Exercise {...exercise} />);

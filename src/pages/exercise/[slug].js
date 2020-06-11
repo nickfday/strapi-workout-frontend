@@ -24,7 +24,7 @@ const Page = (exerciseDetail) => {
   // if (!router.isFallback && !post?.slug) {
   //   return <ErrorPage statusCode={404} />;
   // }
-  // console.log(exerciseDetail.exerciseDetail[0]);
+  //
 
   return (
     <>

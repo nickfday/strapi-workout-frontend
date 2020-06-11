@@ -90,8 +90,6 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
   variationExercise,
   videoMedia,
 }) => {
-  console.log(title);
-  console.log(equipment);
   return (
     <Container>
       <Grid container spacing={2} justify="space-between">

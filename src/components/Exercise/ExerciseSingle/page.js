@@ -37,15 +37,12 @@ const PAGE_QUERY = gql`
 `;
 
 const Page = ({ data }) => {
-  console.log(data);
   if (data.loading) {
     return <CircularProgress />;
   }
   if (data.error) {
     return <p>Error!</p>;
   }
-
-  console.log(data);
 
   return <ExerciseSingle {...data.exercises[0]} />;
 };

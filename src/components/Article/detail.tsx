@@ -11,7 +11,6 @@ const StyledImage = styled.img`
 `;
 
 const ArticleDetail: React.FC<ArticleDataItem> = ({ title, body, media }) => {
-  console.log(media);
   return (
     <Container data-testid="articleDetail">
       <Grid container spacing={2} justify="space-between">

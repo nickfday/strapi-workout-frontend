@@ -22,7 +22,6 @@ import { ArticleList } from 'components/Article/list';
 import { getComponentBuilder, getArticles } from '../../lib/api';
 
 const Page = (articlesList) => {
-  console.log(articlesList);
   return (
     <>
       <ArticleList articles={articlesList.articlesList} />
@@ -32,7 +31,7 @@ const Page = (articlesList) => {
 
 export async function getStaticProps() {
   const articlesList = (await getArticles()) || [];
-  console.log(articlesList);
+
   return {
     props: { articlesList },
   };

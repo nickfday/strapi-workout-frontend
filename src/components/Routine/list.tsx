@@ -4,7 +4,6 @@ import { MaterialAdvancedGridList } from 'components/MaterialUI/Layout/GridList/
 import { RoutineTypes } from './types';
 
 const RoutineList: React.FC<RoutineTypes> = ({ routines }) => {
-  console.log(routines);
   return (
     <Container data-testid="RoutineList">
       <h1>Routines</h1>
