@@ -30,7 +30,7 @@ interface ExerciseSingleProps {
   };
   videoUrl: string;
   image: MediaProps;
-  equipment: EquipmentProps;
+  equipment: EquipmentProps[];
   body: string;
   secondaryMuscle: SecondaryMuscleProps[];
   type: string;
@@ -140,10 +140,10 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
           />
           <SummaryList
             primaryText="Equipment"
-            secondaryText={equipment.map((equipmeentItem, index) => {
+            secondaryText={equipment.map((equipmentItem, index) => {
               return index < equipment.length - 1
-                ? `${equipmeentItem.title}, `
-                : equipmeentItem.title;
+                ? `${equipmentItem.title}, `
+                : equipmentItem.title;
             })}
             icon={<SportsHockey />}
           />
