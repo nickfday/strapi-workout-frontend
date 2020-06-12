@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Container,
   Grid,
-  List,
   ListItem,
   ListItemAvatar,
   ListItemText,
