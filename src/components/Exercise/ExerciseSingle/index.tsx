@@ -115,7 +115,7 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
           </StyledVideo>
         </Grid>
 
-        <StyledGrid item xs={12} md={3} justify='space-between' component='ul'>
+        <StyledGrid item xs={12} md={3} justify='space-between'>
           <SummaryList
             primaryText='Exercise Type'
             secondaryText={type.replace(/_/g, ' ')}
