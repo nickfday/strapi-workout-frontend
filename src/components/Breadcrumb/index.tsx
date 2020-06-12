@@ -12,6 +12,7 @@ interface BreadcrumbProps {
 const StyledBreadcrumb = styled(Breadcrumbs)`
   &&& {
     margin-top: 29px;
+    float: right;
   }
 `;
 

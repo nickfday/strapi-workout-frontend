@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Grid } from '@material-ui/core';
+import { List } from '@material-ui/core';
 
 const StyledVideo = styled.div`
   position: relative;
@@ -15,11 +15,13 @@ const StyledVideo = styled.div`
   }
 `;
 
-const StyledGrid = styled(Grid)`
-  padding: 0;
+const StyledList = styled(List)`
   display: flex;
   flex-direction: column;
-  max-height: 510px;
+  height: 100%;
+  justify-content: center;
+  max-height: 494px;
+  padding: 0;
 `;
 
-export { StyledVideo, StyledGrid };
+export { StyledList, StyledVideo };

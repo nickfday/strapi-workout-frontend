@@ -17,7 +17,7 @@ import ReactMarkdown from 'react-markdown';
 import Breadcrumb from 'components/Breadcrumb';
 
 import { MediaProps } from 'types/media';
-import { StyledVideo, StyledGrid } from './styles';
+import { StyledVideo, StyledList } from './styles';
 
 interface ExerciseSingleProps {
   title: string;
@@ -89,16 +89,16 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
 }) => {
   return (
     <Container>
-      <Grid container spacing={2} justify='space-between'>
+      <Grid container spacing={2} justify="space-between">
         <Grid item xs={6} md={6}>
           <h1>{title}</h1>
         </Grid>
 
-        <Grid item xs={6} md={3}>
+        <Grid item xs={6} md={6}>
           <Breadcrumb
             currentTitle={title}
             previousSlug={'/exercises'}
-            previousTitle='Exercises'
+            previousTitle="Exercises"
           ></Breadcrumb>
         </Grid>
       </Grid>
@@ -108,53 +108,55 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
           <StyledVideo>
             <iframe
               allowFullScreen
-              frameBorder='0'
+              frameBorder="0"
               src={videoMedia ? videoMedia.url : videoUrl}
               title={`${title}`}
             />
           </StyledVideo>
         </Grid>
 
-        <StyledGrid item xs={12} md={3} justify='space-between'>
-          <SummaryList
-            primaryText='Exercise Type'
-            secondaryText={type.replace(/_/g, ' ')}
-            icon={<SportsHandball />}
-          />
-          <SummaryList
-            primaryText='Primary Target Muscle'
-            secondaryText={primaryMuscle.title}
-            icon={<PanTool />}
-          />
+        <Grid item xs={12} md={3}>
+          <StyledList>
+            <SummaryList
+              primaryText="Exercise Type"
+              secondaryText={type.replace(/_/g, ' ')}
+              icon={<SportsHandball />}
+            />
+            <SummaryList
+              primaryText="Primary Target Muscle"
+              secondaryText={primaryMuscle.title}
+              icon={<PanTool />}
+            />
 
-          <SummaryList
-            primaryText='Secondary Target Muscles'
-            secondaryText={secondaryMuscle.map((muscle, index) => {
-              return index < secondaryMuscle.length - 1
-                ? `${muscle.title}, `
-                : muscle.title;
-            })}
-            icon={<PanTool />}
-          />
-          <SummaryList
-            primaryText='Equipment'
-            secondaryText={equipment.map((equipmentItem, index) => {
-              return index < equipment.length - 1
-                ? `${equipmentItem.title}, `
-                : equipmentItem.title;
-            })}
-            icon={<SportsHockey />}
-          />
-          <SummaryList
-            primaryText='Variation'
-            secondaryText={variationExercise.map((exercise, index) => {
-              return index < variationExercise.length - 1
-                ? `${exercise.title}, `
-                : exercise.title;
-            })}
-            icon={<RepeatIcon />}
-          />
-        </StyledGrid>
+            <SummaryList
+              primaryText="Secondary Target Muscles"
+              secondaryText={secondaryMuscle.map((muscle, index) => {
+                return index < secondaryMuscle.length - 1
+                  ? `${muscle.title}, `
+                  : muscle.title;
+              })}
+              icon={<PanTool />}
+            />
+            <SummaryList
+              primaryText="Equipment"
+              secondaryText={equipment.map((equipmentItem, index) => {
+                return index < equipment.length - 1
+                  ? `${equipmentItem.title}, `
+                  : equipmentItem.title;
+              })}
+              icon={<SportsHockey />}
+            />
+            <SummaryList
+              primaryText="Variation"
+              secondaryText={variationExercise.map((exercise, index) => {
+                return index < variationExercise.length - 1
+                  ? `${exercise.title}, `
+                  : exercise.title;
+              })}
+              icon={<RepeatIcon />}
+            />
+          </StyledList>
+        </Grid>
       </Grid>
       <ReactMarkdown source={body} />
     </Container>
