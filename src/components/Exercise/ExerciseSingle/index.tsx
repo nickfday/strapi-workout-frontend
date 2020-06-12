@@ -18,7 +18,7 @@ import ReactMarkdown from 'react-markdown';
 import Breadcrumb from 'components/Breadcrumb';
 
 import { MediaProps } from 'types/media';
-import { StyledVideo } from './styles';
+import { StyledVideo, StyledGrid } from './styles';
 
 interface ExerciseSingleProps {
   title: string;
@@ -67,14 +67,12 @@ const SummaryList: React.FC<SummaryListProps> = ({
       secondaryText.length > 0)
   ) {
     return (
-      <List>
-        <ListItem>
-          <ListItemAvatar>
-            <Avatar>{icon}</Avatar>
-          </ListItemAvatar>
-          <ListItemText primary={primaryText} secondary={secondaryText} />
-        </ListItem>
-      </List>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>{icon}</Avatar>
+        </ListItemAvatar>
+        <ListItemText primary={primaryText} secondary={secondaryText} />
+      </ListItem>
     );
   } else return null;
 };
@@ -92,7 +90,7 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
 }) => {
   return (
     <Container>
-      <Grid container spacing={2} justify="space-between">
+      <Grid container spacing={2} justify='space-between'>
         <Grid item xs={6} md={6}>
           <h1>{title}</h1>
         </Grid>
@@ -101,7 +99,7 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
           <Breadcrumb
             currentTitle={title}
             previousSlug={'/exercises'}
-            previousTitle="Exercises"
+            previousTitle='Exercises'
           ></Breadcrumb>
         </Grid>
       </Grid>
@@ -111,26 +109,27 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
           <StyledVideo>
             <iframe
               allowFullScreen
+              frameBorder='0'
               src={videoMedia ? videoMedia.url : videoUrl}
               title={`${title}`}
             />
           </StyledVideo>
         </Grid>
 
-        <Grid xs={12} md={3}>
+        <StyledGrid item xs={12} md={3} justify='space-between' component='ul'>
           <SummaryList
-            primaryText="Exercise Type"
+            primaryText='Exercise Type'
             secondaryText={type.replace(/_/g, ' ')}
             icon={<SportsHandball />}
           />
           <SummaryList
-            primaryText="Primary Target Muscle"
+            primaryText='Primary Target Muscle'
             secondaryText={primaryMuscle.title}
             icon={<PanTool />}
           />
 
           <SummaryList
-            primaryText="Secondary Target Muscles"
+            primaryText='Secondary Target Muscles'
             secondaryText={secondaryMuscle.map((muscle, index) => {
               return index < secondaryMuscle.length - 1
                 ? `${muscle.title}, `
@@ -139,7 +138,7 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
             icon={<PanTool />}
           />
           <SummaryList
-            primaryText="Equipment"
+            primaryText='Equipment'
             secondaryText={equipment.map((equipmentItem, index) => {
               return index < equipment.length - 1
                 ? `${equipmentItem.title}, `
@@ -148,7 +147,7 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
             icon={<SportsHockey />}
           />
           <SummaryList
-            primaryText="Variation"
+            primaryText='Variation'
             secondaryText={variationExercise.map((exercise, index) => {
               return index < variationExercise.length - 1
                 ? `${exercise.title}, `
@@ -156,7 +155,7 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
             })}
             icon={<RepeatIcon />}
           />
-        </Grid>
+        </StyledGrid>
       </Grid>
       <ReactMarkdown source={body} />
     </Container>
