@@ -19,9 +19,6 @@ const StyledList = styled(List)`
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: center;
-  max-height: 494px;
-  padding: 0;
 `;
 
 export { StyledList, StyledVideo };
