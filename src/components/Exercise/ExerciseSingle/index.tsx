@@ -12,7 +12,7 @@ import SportsHockey from '@material-ui/icons/SportsHockey';
 import PanTool from '@material-ui/icons/PanTool';
 import RepeatIcon from '@material-ui/icons/Repeat';
 
-import ReactMarkdown from 'react-markdown';
+import MarkDown from 'components/Markdown';
 
 import Breadcrumb from 'components/Breadcrumb';
 
@@ -158,7 +158,8 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
           </StyledList>
         </Grid>
       </Grid>
-      <ReactMarkdown source={body} />
+      {/* <ReactMarkdown source={body} /> */}
+      <MarkDown source={body} />
     </Container>
   );
 };
