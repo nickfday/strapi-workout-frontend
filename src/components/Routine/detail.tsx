@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'components/Markdown';
 import { Box, Container, Grid } from '@material-ui/core';
 import Breadcrumb from 'components/Breadcrumb';
 import { RoutineDataItem } from './types';
@@ -51,14 +51,7 @@ const RoutineDetail: React.FC<RoutineDataItem> = ({
       </Grid>
 
       <Grid container spacing={2} justify="space-between">
-        <Grid md={7}>
-          <ReactMarkdown source={body} />
-        </Grid>
-        <Grid md={4}>
-          <Box mt={2}>
-            <StyledImage src={media.formats.small.url} />
-          </Box>
-        </Grid>
+        <Markdown source={body} />
 
         <Grid container spacing={4}>
           {session.map((item) => {
