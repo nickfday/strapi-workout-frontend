@@ -13,7 +13,7 @@ import PanTool from '@material-ui/icons/PanTool';
 import RepeatIcon from '@material-ui/icons/Repeat';
 
 import MarkDown from 'components/Markdown';
-
+import Anatomy from 'components/Anatomy';
 import Breadcrumb from 'components/Breadcrumb';
 
 import { MediaProps } from 'types/media';
@@ -160,6 +160,7 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
       </Grid>
       {/* <ReactMarkdown source={body} /> */}
       <MarkDown source={body} />
+      <Anatomy />
     </Container>
   );
 };

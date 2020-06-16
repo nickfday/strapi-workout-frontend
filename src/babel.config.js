@@ -4,6 +4,7 @@ module.exports = {
       presets: ['next/babel'],
       plugins: [
         [
+          'inline-react-svg',
           'babel-plugin-styled-components',
           {
             ssr: true,
@@ -21,6 +22,7 @@ module.exports = {
       presets: ['next/babel'],
       plugins: [
         [
+          'inline-react-svg',
           'babel-plugin-styled-components',
           {
             ssr: true,
