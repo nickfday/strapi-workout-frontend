@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'components/Markdown';
 import { Container, Grid } from '@material-ui/core';
 import Breadcrumb from 'components/Breadcrumb';
 import { ArticleDataItem } from './types';
@@ -12,8 +12,8 @@ const StyledImage = styled.img`
 
 const ArticleDetail: React.FC<ArticleDataItem> = ({ title, body, media }) => {
   return (
-    <Container data-testid="articleDetail">
-      <Grid container spacing={2} justify="space-between">
+    <Container data-testid='articleDetail'>
+      <Grid container spacing={2} justify='space-between'>
         <Grid item xs={6} md={6}>
           <h1>{title}</h1>
         </Grid>
@@ -22,12 +22,11 @@ const ArticleDetail: React.FC<ArticleDataItem> = ({ title, body, media }) => {
           <Breadcrumb
             currentTitle={title}
             previousSlug={'/articles'}
-            previousTitle="Articles"
+            previousTitle='Articles'
           ></Breadcrumb>
         </Grid>
       </Grid>
-      <StyledImage src={media.formats.small.url} />
-      <ReactMarkdown source={body} />
+      <Markdown source={body} />
     </Container>
   );
 };
