@@ -1,14 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 import Markdown from 'components/Markdown';
 import { Container, Grid } from '@material-ui/core';
 import Breadcrumb from 'components/Breadcrumb';
 import { ArticleDataItem } from './types';
-
-const StyledImage = styled.img`
-  float: right;
-  margin-left: 10px;
-`;
 
 const ArticleDetail: React.FC<ArticleDataItem> = ({ title, body, media }) => {
   return (
