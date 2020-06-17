@@ -4,11 +4,13 @@ import dynamic from 'next/dynamic';
 const CtaBanner = dynamic(() => import('components/CtaBanner'));
 const CardGroup = dynamic(() => import('components/CardGroup'));
 const HeroBanner = dynamic(() => import('components/HeroBanner'));
+const Markdown = dynamic(() => import('components/Markdown'));
 
 const reactComponents = {
   ComponentGlobalCard: CardGroup,
   ComponentGlobalCtaBanner: CtaBanner,
   ComponentGlobalPageBanner: HeroBanner,
+  ComponentGlobalRichText: Markdown,
 };
 
 const ComponentBuilder = ({ components }) => {

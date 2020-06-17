@@ -31,11 +31,12 @@ const StyledReactMarkdown = styled(ReactMarkdown)`
 `;
 
 interface MarkDownProps {
-  source: string;
+  source?: string;
+  body?: string;
 }
 
-const Markdown: React.FC<MarkDownProps> = ({ source }) => {
-  return <StyledReactMarkdown source={source} />;
+const Markdown: React.FC<MarkDownProps> = ({ source, body }) => {
+  return <StyledReactMarkdown source={source ? source : body} />;
 };
 
 export default Markdown;
