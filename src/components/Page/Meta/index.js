@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import { GA_TRACKING_ID } from '../../../../lib/gtag';
+import cookies from 'next-cookies';
 
 const Meta = () => {
   return (
@@ -19,7 +20,6 @@ const Meta = () => {
 
       <title>Workout Mentor</title>
 
-      {/* Global Site Tag (gtag.js) - Google Analytics */}
       <script
         async
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}

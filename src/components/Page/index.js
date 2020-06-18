@@ -8,6 +8,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { Container } from '@material-ui/core';
 import theme from './theme';
+// import ConsentBanner from './ConsentBanner';
 
 const Inner = styled.div`
   max-width: ${(props) => props.theme.maxWidth};
@@ -29,6 +30,8 @@ export default class Page extends Component {
         <Meta />
         <Header />
         <StyledContentWrapper>{this.props.children}</StyledContentWrapper>
+        {/* <ConsentBanner /> */}
+
         <BottomNav />
       </ThemeProvider>
     );
