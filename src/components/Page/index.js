@@ -17,7 +17,7 @@ const Inner = styled.div`
 `;
 
 const StyledContentWrapper = styled(Container)`
-  min-height: 82vh;
+  min-height: 84vh;
   margin-bottom: 40px;
 `;
 
