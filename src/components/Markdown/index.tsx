@@ -19,6 +19,7 @@ const StyledReactMarkdown = styled(ReactMarkdown)`
     margin-left: 10px;
   }
 
+  ul,
   ol {
     padding-left: 17px;
   }
