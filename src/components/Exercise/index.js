@@ -31,7 +31,7 @@ const Exercise = ({ exercises }) => {
         {item.title}
       </Link>,
       item.type.replace(/_/g, ' '),
-      item.primaryMuscle.title,
+      item.primaryMuscle ? item.primaryMuscle.title : null,
       item.equipment.map((equipmentItem, index) => {
         return index < item.equipment.length - 1
           ? `${equipmentItem.title},`
