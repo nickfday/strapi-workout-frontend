@@ -16,7 +16,6 @@ const StyledReactMarkdown = styled(ReactMarkdown)`
 
   img {
     width: 400px;
-    margin-left: 10px;
   }
 
   ul,
@@ -27,6 +26,7 @@ const StyledReactMarkdown = styled(ReactMarkdown)`
   @media only screen and (min-width: ${theme.breakpoints.sm}px) {
     img {
       float: right;
+      margin: 0 0 20px 10px;
     }
   }
 `;

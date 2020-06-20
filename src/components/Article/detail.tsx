@@ -8,11 +8,11 @@ const ArticleDetail: React.FC<ArticleDataItem> = ({ title, body }) => {
   return (
     <Container data-testid="articleDetail">
       <Grid container spacing={2} justify="space-between">
-        <Grid item xs={6} md={6}>
+        <Grid item xs={6}>
           <h1>{title}</h1>
         </Grid>
 
-        <Grid item xs={6} md={3}>
+        <Grid item xs={6}>
           <Breadcrumb
             currentTitle={title}
             previousSlug={'/articles'}
