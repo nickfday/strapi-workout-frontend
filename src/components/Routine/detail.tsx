@@ -9,9 +9,16 @@ import { RoutineDataItem } from './types';
 import CustomizedTables from 'components/MaterialUI/dataDisplay/table/alternateTable';
 import Link from 'components/Link';
 import TransitionsModal from 'components/MaterialUI/utils/modal';
+import { format } from 'date-fns';
 
 const StyledImage = styled.img`
   width: 100%;
+`;
+
+const StyledDate = styled.span`
+  font-size: 16px;
+  color: gray;
+  font-weight: normal;
 `;
 
 const RoutineDetail: React.FC<RoutineDataItem> = ({
@@ -60,11 +67,23 @@ const RoutineDetail: React.FC<RoutineDataItem> = ({
               <Grid key={item.title} item xs={12} md={4}>
                 <Grid container justify="space-between" alignItems="center">
                   <Grid item>
-                    <h2>{item.title}</h2>
-                    {item.date}
+                    <div>
+                      <h2>
+                        {item.title}{' '}
+                        <StyledDate>
+                          {format(new Date(item.date), 'E H:mm a')}
+                        </StyledDate>
+                      </h2>
+                    </div>
+
+                    {/* {item.date} */}
                   </Grid>
                   <Grid item>
-                    <TransitionsModal buttonText="More Info" body={item.body} />
+                    <TransitionsModal
+                      buttonText="More Info"
+                      title={item.title}
+                      body={<Markdown source={item.body} />}
+                    />
                   </Grid>
                 </Grid>
                 <CustomizedTables headers={headers} rows={dynamicRows(item)} />
