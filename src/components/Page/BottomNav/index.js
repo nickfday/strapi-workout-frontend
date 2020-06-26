@@ -1,7 +1,6 @@
 import React from 'react';
 import {
-  AppBar,
-  Container,
+s Container,
   List,
   ListItem,
   ListItemText,
@@ -49,12 +48,14 @@ const BottomNavData = {
   },
 };
 
-const StyledBottomNav = styled(AppBar)`
+const StyledBottomNav = styled.div`
   &&& {
     bottom: 0;
     top: auto;
     display: flex;
     flex-direction: row;
+    background: #373a3c;
+    color: #fff;
   }
 `;
 
