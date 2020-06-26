@@ -7,23 +7,17 @@ const StyledList = styled(List)`
   display: flex;
 `;
 
-const StyledBox = styled(Box)`
-  a {
-    text-decoration: none;
-  }
-`;
-
 const DesktopNav = (items) => {
   return (
     <StyledList>
       {items.data.NavData.slice(1).map((item) => (
-        <StyledBox key={item.title}>
+        <Box key={item.title}>
           <Link {...item.link} key={item.title} noUnderline>
             <ListItem button key={item.title}>
               <ListItemText primary={item.title}>{item.title}</ListItemText>
             </ListItem>
           </Link>
-        </StyledBox>
+        </Box>
       ))}
     </StyledList>
   );
