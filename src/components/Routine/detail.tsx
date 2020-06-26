@@ -8,6 +8,7 @@ import Breadcrumb from 'components/Breadcrumb';
 import { RoutineDataItem } from './types';
 import CustomizedTables from 'components/MaterialUI/dataDisplay/table/alternateTable';
 import Link from 'components/Link';
+import TransitionsModal from 'components/MaterialUI/utils/modal';
 
 const StyledImage = styled.img`
   width: 100%;
@@ -57,7 +58,15 @@ const RoutineDetail: React.FC<RoutineDataItem> = ({
           {session.map((item) => {
             return (
               <Grid key={item.title} item xs={12} md={4}>
-                <h2>{item.title}</h2>
+                <Grid container justify="space-between" alignItems="center">
+                  <Grid item>
+                    <h2>{item.title}</h2>
+                    {item.date}
+                  </Grid>
+                  <Grid item>
+                    <TransitionsModal buttonText="More Info" body={item.body} />
+                  </Grid>
+                </Grid>
                 <CustomizedTables headers={headers} rows={dynamicRows(item)} />
               </Grid>
             );
