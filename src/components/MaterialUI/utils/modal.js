@@ -1,8 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
-import Fade from '@material-ui/core/Fade';
+import { Container, Modal, Backdrop, Fade } from '@material-ui/core';
 import InfoIcon from '@material-ui/icons/Info';
 
 const useStyles = makeStyles((theme) => ({
@@ -10,12 +8,17 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    maxWidth: '95%',
+    margin: '0 auto',
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
+  },
+  info: {
+    cursor: 'pointer',
   },
 }));
 
@@ -33,10 +36,8 @@ export default function TransitionsModal(props) {
 
   return (
     <div>
-      <InfoIcon onClick={handleOpen} />
-      {/* <button type="button" onClick={handleOpen}>
-        {props.buttonText}
-      </button> */}
+      <InfoIcon className={classes.info} onClick={handleOpen} />
+
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -51,7 +52,8 @@ export default function TransitionsModal(props) {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            {props.body}
+            <h2 id="transition-modal-title">{props.title}</h2>
+            <span id="transition-modal-description">{props.body}</span>
             {/* <h2 id="transition-modal-title">Transition modal</h2>
             <p id="transition-modal-description">
               react-transition-group animates me.
