@@ -65,7 +65,7 @@ const TemporaryDrawer = (items) => {
       className={clsx(classes.list, {
         [classes.fullList]: anchor === 'top',
       })}
-      role='presentation'
+      role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
@@ -102,9 +102,9 @@ const TemporaryDrawer = (items) => {
             <ButtonGroup>
               <Button
                 onClick={toggleDrawer(anchor, true)}
-                className='menu-toggle'
+                className="menu-toggle"
               >
-                <IconButton edge='start' color='inherit' aria-label='menu'>
+                <IconButton edge="start" color="inherit" aria-label="menu">
                   <StyledMenuIcon />
                 </IconButton>
               </Button>
