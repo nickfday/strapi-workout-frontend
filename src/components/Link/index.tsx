@@ -18,7 +18,7 @@ interface StyledSpanProps {
   noUnderline?: boolean;
 }
 
-const StyledSpan = styled.span<StyledSpanProps>`
+const StyledLink = styled.a<StyledSpanProps>`
   text-decoration: ${({ noUnderline }) => (noUnderline ? 'none' : 'underline')};
   cursor: pointer;
   font-size: inherit;
@@ -28,10 +28,10 @@ const StyledSpan = styled.span<StyledSpanProps>`
 const Link: React.FC<LinkProps> = ({ children, url, noUnderline }) => {
   if (typeof window !== 'undefined') {
     return (
-      <NextLink href={url}>
-        <StyledSpan noUnderline={noUnderline}>
-          <a data-testid="anchor">{children}</a>
-        </StyledSpan>
+      <NextLink href={url} passHref>
+        <StyledLink noUnderline={noUnderline} data-testid="anchor">
+          {children}
+        </StyledLink>
       </NextLink>
     );
   } else {
