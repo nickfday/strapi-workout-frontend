@@ -67,7 +67,7 @@ const Footer = (props) => {
       <Container>
         <StyledList>
           {BottomNavData.data.NavData.map((item) => (
-            <Link {...item.link} key={item.title} noUnderline>
+            <Link {...item.link} key={item.title}>
               <ListItem button key={item.title}>
                 <ListItemText primary={item.title}>{item.title}</ListItemText>
               </ListItem>

@@ -71,7 +71,7 @@ const TemporaryDrawer = (items) => {
     >
       <List>
         {items.data.NavData.map((item, index) => (
-          <Link {...item.link} key={item.title} noUnderline>
+          <Link {...item.link} key={item.title}>
             <ListItem button key={item.title}>
               <ListItemText primary={item.title}>{item.title}</ListItemText>
             </ListItem>
