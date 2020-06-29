@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Box } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import Link from 'components/Link';
 import { MaterialAdvancedGridList } from 'components/MaterialUI/Layout/GridList/AdvancedGridList';
 import { ArticleTypes } from './types';
