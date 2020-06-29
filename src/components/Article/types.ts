@@ -8,6 +8,7 @@ export interface ArticleDataItem {
   slug: string;
   link: LinkProps;
   media: MediaProps;
+  featured?: boolean;
 }
 
 export interface ArticleTypes {

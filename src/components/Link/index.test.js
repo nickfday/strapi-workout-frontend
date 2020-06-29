@@ -9,11 +9,6 @@ const testProps = {
 
 afterEach(cleanup);
 
-it('matches snapshot', () => {
-  const { asFragment } = render(<Link {...testProps} />);
-  expect(asFragment()).toMatchSnapshot();
-});
-
 it('renders props correctly', () => {
   const { getByTestId } = render(<Link {...testProps}>Exercises</Link>);
   expect(getByTestId('anchor').textContent).toBe('Exercises');

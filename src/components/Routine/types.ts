@@ -18,6 +18,7 @@ export interface RoutineDataItem {
   link: LinkProps;
   media: MediaProps;
   session: SessionDataItem[];
+  featured?: boolean;
 }
 
 export interface RoutineTypes {
