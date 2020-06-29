@@ -1,11 +1,11 @@
 import Head from 'next/head';
 
 import { GA_TRACKING_ID } from '../../../../lib/gtag';
-import cookies from 'next-cookies';
+//import cookies from 'next-cookies';
 
 const Meta = () => {
   return (
-    <Head>
+    <>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="utf-8" />
       <link rel="shortcut icon" href="/static/favicon.png" />
@@ -36,7 +36,7 @@ const Meta = () => {
           `,
         }}
       />
-    </Head>
+    </>
   );
 };
 

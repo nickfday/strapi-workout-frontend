@@ -6,7 +6,6 @@ import styled, { css } from 'styled-components';
 const StyledList = styled(List)`
   display: flex;
 `;
-
 const DesktopNav = (items) => {
   return (
     <StyledList>

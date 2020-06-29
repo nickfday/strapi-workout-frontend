@@ -13,4 +13,16 @@ export default createMuiTheme({
   typography: {
     fontSize: 16,
   },
+
+  overrides: {
+    MuiCssBaseline: {
+      '@global': {
+        a: {
+          textDecoration: 'none',
+          fontSize: 'inherit',
+          color: 'inherit',
+        },
+      },
+    },
+  },
 });

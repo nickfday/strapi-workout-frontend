@@ -1,13 +1,8 @@
 import React from 'react';
-import {
-s Container,
-  List,
-  ListItem,
-  ListItemText,
-} from '@material-ui/core';
+import { Container, List, ListItem, ListItemText } from '@material-ui/core';
 import Link from 'components/Link';
 import styled from 'styled-components';
-import theme from 'components/Page/theme';
+import theme from '../../theme';
 
 const BottomNavData = {
   data: {
@@ -66,7 +61,7 @@ const StyledList = styled(List)`
   }
 `;
 
-const BottomNav = (props) => {
+const Footer = (props) => {
   return (
     <StyledBottomNav color="primary" position="static">
       <Container>
@@ -84,4 +79,4 @@ const BottomNav = (props) => {
   );
 };
 
-export default BottomNav;
+export default Footer;

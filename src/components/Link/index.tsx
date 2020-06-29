@@ -1,12 +1,5 @@
 import React from 'react';
 import NextLink from 'next/link';
-import styled from 'styled-components';
-
-export interface LinkProps {
-  url: string;
-  title?: string;
-  noUnderline?: boolean;
-}
 
 declare global {
   interface Window {
@@ -14,24 +7,16 @@ declare global {
   }
 }
 
-interface StyledSpanProps {
-  noUnderline?: boolean;
+export interface LinkProps {
+  url: string;
+  title?: string;
 }
 
-const StyledLink = styled.a<StyledSpanProps>`
-  text-decoration: ${({ noUnderline }) => (noUnderline ? 'none' : 'underline')};
-  cursor: pointer;
-  font-size: inherit;
-  color: inherit;
-`;
-
-const Link: React.FC<LinkProps> = ({ children, url, noUnderline }) => {
+const Link: React.FC<LinkProps> = ({ children, url }) => {
   if (typeof window !== 'undefined') {
     return (
       <NextLink href={url} passHref>
-        <StyledLink noUnderline={noUnderline} data-testid="anchor">
-          {children}
-        </StyledLink>
+        <a data-testid="anchor">{children}</a>
       </NextLink>
     );
   } else {

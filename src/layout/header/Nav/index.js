@@ -13,7 +13,7 @@ import { Box, Toolbar } from '@material-ui/core';
 
 import DesktopNav from './desktopNav';
 import Drawer from '../Drawer';
-import Logo from './logo';
+import Logo from '../logo';
 
 const Nav = (items) => {
   return (
@@ -27,9 +27,7 @@ const Nav = (items) => {
               </Grid>
             </Hidden>
 
-            <Grid item>
-              <Logo />
-            </Grid>
+            <Logo />
 
             <Hidden smDown>
               <Grid item>

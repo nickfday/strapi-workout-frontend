@@ -1,8 +1,16 @@
-import Nav from '../Nav';
+import Nav from './Nav';
 import Link from 'next/link';
 import styled from 'styled-components';
 // import Router from 'next/router';
 import NavData from 'src/util/staticData/navData';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  header: {
+    background: 'red',
+  },
+}));
+
 // import NProgress from 'nprogress';
 
 // Router.onRouteChangeStart = () => {
@@ -20,10 +28,12 @@ import NavData from 'src/util/staticData/navData';
 // };
 
 const Header = () => {
+  const classes = useStyles();
+
   return (
-    <>
+    <div className={classes.header}>
       <Nav {...NavData} />
-    </>
+    </div>
   );
 };
 
