@@ -46,7 +46,7 @@ const CARD_FRAGMENT = gql`
 
 const Card: React.FC<CardProps> = ({ title, body, link, media }) => {
   return (
-    <MaterialCard data-testid="caLinkrd">
+    <MaterialCard data-testid="card">
       <Link url={link.url}>
         <CardActionArea>
           <StyledCardMedia
@@ -81,19 +81,17 @@ const Card: React.FC<CardProps> = ({ title, body, link, media }) => {
 
 const CardGroup: React.FC<CardGroupProps> = (props) => {
   return (
-    <Container>
-      <Box mb={5}>
-        <Grid container spacing={3}>
-          {props.cardGroup.map((item) => {
-            return (
-              <Grid item xs={12} sm={6} key={item.id}>
-                <Card {...item} />
-              </Grid>
-            );
-          })}
-        </Grid>
-      </Box>
-    </Container>
+    <Box mb={5}>
+      <Grid container spacing={3}>
+        {props.cardGroup.map((item) => {
+          return (
+            <Grid item xs={12} sm={6} key={item.id}>
+              <Card {...item} />
+            </Grid>
+          );
+        })}
+      </Grid>
+    </Box>
   );
 };
 

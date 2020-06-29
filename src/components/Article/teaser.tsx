@@ -10,16 +10,14 @@ const ArticleTeaser: React.FC<ArticleTypes> = ({ articles }) => {
   articles[0]['featured'] = true;
 
   return (
-    <Container data-testid="articleTeaser">
-      <Box mb={2}>
-        <MaterialAdvancedGridList items={articles} />
-        <StyledLinkWrapper>
-          <Link url="/articles">
-            <h3>See all articles</h3>
-          </Link>
-        </StyledLinkWrapper>
-      </Box>
-    </Container>
+    <Box mb={2} data-testid="articleTeaser">
+      <MaterialAdvancedGridList items={articles} />
+      <StyledLinkWrapper>
+        <Link url="/articles">
+          <h3>See all articles</h3>
+        </Link>
+      </StyledLinkWrapper>
+    </Box>
   );
 };
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import Markdown from 'components/Markdown';
-import { Container, Grid } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
 import Breadcrumb from 'components/Breadcrumb';
 import { ArticleDataItem } from './types';
 
 const ArticleDetail: React.FC<ArticleDataItem> = ({ title, body }) => {
   return (
-    <Container data-testid="articleDetail">
+    <Box data-testid="articleDetail">
       <Grid container spacing={2} justify="space-between">
         <Grid item xs={6}>
           <h1>{title}</h1>
@@ -21,7 +21,7 @@ const ArticleDetail: React.FC<ArticleDataItem> = ({ title, body }) => {
         </Grid>
       </Grid>
       <Markdown source={body} />
-    </Container>
+    </Box>
   );
 };
 

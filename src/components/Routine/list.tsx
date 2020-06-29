@@ -1,14 +1,14 @@
 import React from 'react';
-import { Container } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import { MaterialAdvancedGridList } from 'components/MaterialUI/Layout/GridList/AdvancedGridList';
 import { RoutineTypes } from './types';
 
 const RoutineList: React.FC<RoutineTypes> = ({ routines }) => {
   return (
-    <Container data-testid="RoutineList">
+    <Box data-testid="RoutineList">
       <h1>Routines</h1>
       <MaterialAdvancedGridList items={routines} />
-    </Container>
+    </Box>
   );
 };
 

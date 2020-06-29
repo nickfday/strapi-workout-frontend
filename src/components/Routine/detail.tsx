@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Markdown from 'components/Markdown';
-import { Box, Container, Grid } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
 import Breadcrumb from 'components/Breadcrumb';
 import { RoutineDataItem } from './types';
 import CustomizedTables from 'components/MaterialUI/dataDisplay/table/alternateTable';
@@ -43,7 +43,7 @@ const RoutineDetail: React.FC<RoutineDataItem> = ({
   };
 
   return (
-    <Container data-testid="routineDetail">
+    <Box data-testid="routineDetail">
       <Grid container spacing={2} justify="space-between">
         <Grid>
           <h1>{title}</h1>
@@ -92,7 +92,7 @@ const RoutineDetail: React.FC<RoutineDataItem> = ({
           })}
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 };
 

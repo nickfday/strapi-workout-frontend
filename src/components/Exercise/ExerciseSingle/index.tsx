@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Container,
+  Box,
   Grid,
   ListItem,
   ListItemAvatar,
@@ -88,7 +88,7 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
   videoMedia,
 }) => {
   return (
-    <Container>
+    <Box>
       <Grid container spacing={2} justify="space-between">
         <Grid item xs={6} md={6}>
           <h1>{title}</h1>
@@ -160,7 +160,7 @@ const ExerciseSingle: React.FC<ExerciseSingleProps> = ({
       </Grid>
       {/* <ReactMarkdown source={body} /> */}
       <MarkDown source={body} />
-    </Container>
+    </Box>
   );
 };
 
