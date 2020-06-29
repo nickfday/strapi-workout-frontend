@@ -6,7 +6,6 @@ import {
   CardActionArea,
   CardContent,
   Typography,
-  Container,
   Grid,
 } from '@material-ui/core';
 import MaterialCard from '@material-ui/core/Card';
