@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
-import theme from 'components/Page/theme';
+import theme from 'theme';
 
 const StyledReactMarkdown = styled(ReactMarkdown)`
   h1,
