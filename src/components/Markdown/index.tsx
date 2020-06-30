@@ -23,7 +23,7 @@ const StyledReactMarkdown = styled(ReactMarkdown)`
     padding-left: 17px;
   }
 
-  @media only screen and (min-width: ${theme.breakpoints.sm}px) {
+  @media only screen and (min-width: ${theme.breakpoints.values.sm}px) {
     img {
       float: right;
       margin: 0 0 20px 10px;
