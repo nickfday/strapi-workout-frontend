@@ -71,6 +71,7 @@ const StyledList = styled(List)`
 const StyledBox = styled(Box)`
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   @media only screen and (min-width: ${theme.breakpoints.values.sm}px) {
     flex-direction: row;
