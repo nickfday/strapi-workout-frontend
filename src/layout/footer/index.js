@@ -1,5 +1,12 @@
 import React from 'react';
-import { Container, List, ListItem, ListItemText } from '@material-ui/core';
+import {
+  Appbar,
+  Box,
+  Container,
+  List,
+  ListItem,
+  ListItemText,
+} from '@material-ui/core';
 import Link from 'components/Link';
 import styled from 'styled-components';
 import theme from '../../theme';
@@ -55,9 +62,18 @@ const StyledBottomNav = styled.div`
 `;
 
 const StyledList = styled(List)`
-  @media only screen and (min-width: ${theme.breakpoints.sm}px) {
+  @media only screen and (min-width: ${theme.breakpoints.values.sm}px) {
     display: flex;
     height: 67px;
+  }
+`;
+
+const StyledBox = styled(Box)`
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: ${theme.breakpoints.values.sm}px) {
+    flex-direction: row;
   }
 `;
 
@@ -66,13 +82,15 @@ const Footer = (props) => {
     <StyledBottomNav color="primary" position="static">
       <Container>
         <StyledList>
-          {BottomNavData.data.NavData.map((item) => (
-            <Link {...item.link} key={item.title}>
-              <ListItem button key={item.title}>
-                <ListItemText primary={item.title}>{item.title}</ListItemText>
-              </ListItem>
-            </Link>
-          ))}
+          <StyledBox>
+            {BottomNavData.data.NavData.map((item) => (
+              <Link {...item.link} key={item.title}>
+                <ListItem button key={item.title}>
+                  <ListItemText primary={item.title}>{item.title}</ListItemText>
+                </ListItem>
+              </Link>
+            ))}
+          </StyledBox>
         </StyledList>
       </Container>
     </StyledBottomNav>
