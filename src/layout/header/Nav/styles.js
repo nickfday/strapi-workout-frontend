@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import AppBar from '@material-ui/core/AppBar';
+import { IconButton, Typography, AppBar } from '@material-ui/core';
+
 import { useTheme } from '@material-ui/core/styles';
 
 export const StyledAppBar = styled(AppBar)`
