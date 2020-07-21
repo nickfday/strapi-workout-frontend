@@ -11,12 +11,14 @@ import { Container, Grid, Hidden, Menu, MenuItem } from '@material-ui/core';
 
 import { Box, Toolbar } from '@material-ui/core';
 
-import DesktopNav from './desktopNav';
-import Drawer from '../Drawer';
-import Logo from '../logo';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
+
+import DesktopNav from './desktopNav';
+import Drawer from '../Drawer';
+import Logo from '../logo';
+import Login from './login';
 
 const useStyles = makeStyles((theme) => ({
   menuButton: {
@@ -24,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
   },
   gridItem: {
     flexGrow: 1,
+  },
+  menu: {
+    padding: '20px',
   },
 }));
 
@@ -64,7 +69,7 @@ const Nav = (items) => {
                 <DesktopNav {...items} />
               </Grid>
             </Hidden>
-            <IconButton
+            {/* <IconButton
               edge="end"
               aria-label="account of current user"
               aria-controls={menuId}
@@ -74,7 +79,7 @@ const Nav = (items) => {
               className={classes.menuButton}
             >
               <AccountCircle />
-            </IconButton>
+            </IconButton> */}
           </Grid>
         </Container>
       </StyledAppBar>
@@ -87,7 +92,9 @@ const Nav = (items) => {
         transformOrigin={{ vertical: 'top', horizontal: 'right' }}
         open={isMenuOpen}
         onClose={handleMenuClose}
+        classes={classes.menu}
       >
+        <Login />
         <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
         <MenuItem onClick={handleMenuClose}>My account</MenuItem>
       </Menu>
