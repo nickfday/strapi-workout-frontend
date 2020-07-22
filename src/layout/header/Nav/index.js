@@ -19,6 +19,7 @@ import DesktopNav from './desktopNav';
 import Drawer from '../Drawer';
 import Logo from '../logo';
 import Login from './login';
+import Link from 'src/components/Link';
 
 const useStyles = makeStyles((theme) => ({
   menuButton: {
@@ -69,7 +70,7 @@ const Nav = (items) => {
                 <DesktopNav {...items} />
               </Grid>
             </Hidden>
-            {/* <IconButton
+            <IconButton
               edge="end"
               aria-label="account of current user"
               aria-controls={menuId}
@@ -79,7 +80,7 @@ const Nav = (items) => {
               className={classes.menuButton}
             >
               <AccountCircle />
-            </IconButton> */}
+            </IconButton>
           </Grid>
         </Container>
       </StyledAppBar>
@@ -94,14 +95,20 @@ const Nav = (items) => {
         onClose={handleMenuClose}
         classes={classes.menu}
       >
-        <Login />
-        <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-        <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+        {/* <Login />
+        <MenuItem onClick={handleMenuClose}>Profile</MenuItem> */}
+        <MenuItem>
+          <Link url="/login">Login</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link url="/signup">Sign up</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link url="/my-account">My Account</Link>
+        </MenuItem>{' '}
       </Menu>
     </Box>
   );
 };
-
-// Nav.propTypes = {};
 
 export default Nav;

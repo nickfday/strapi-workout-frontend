@@ -10,6 +10,7 @@ import theme from '../theme';
 import Header from '../layout/header';
 import Meta from '../layout/header/meta';
 import Footer from '../layout/footer';
+import { AuthProvider } from '../auth';
 
 const useStyles = makeStyles({
   main: {
@@ -32,17 +33,19 @@ export default function MyApp(props) {
 
   return (
     <React.Fragment>
-      <Head>
-        <Meta />
-      </Head>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Header />
-        <Container className={classes.main}>
-          <Component {...pageProps} />
-        </Container>
-        <Footer />
-      </ThemeProvider>
+      <AuthProvider>
+        <Head>
+          <Meta />
+        </Head>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Header />
+          <Container className={classes.main}>
+            <Component {...pageProps} />
+          </Container>
+          <Footer />
+        </ThemeProvider>
+      </AuthProvider>
     </React.Fragment>
   );
 }
