@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { withRouter, Router } from 'next/router';
-import firebaseApp from './base';
+import firebaseApp from '../../base';
 
 const SignUp = () => {
   const handleSignUp = useCallback(async (event) => {

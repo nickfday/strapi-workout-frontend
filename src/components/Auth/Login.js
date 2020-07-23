@@ -1,7 +1,7 @@
 import React, { useCallback, useContext } from 'react';
 import { useRouter, withRouter } from 'next/router';
-import firebaseApp from './base.js';
-import { AuthContext } from './auth.js';
+import firebaseApp from '../../base.js';
+import { AuthContext } from './auth';
 
 const Login = () => {
   const router = useRouter();

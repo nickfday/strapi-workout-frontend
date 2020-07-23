@@ -10,7 +10,7 @@ import theme from '../theme';
 import Header from '../layout/header';
 import Meta from '../layout/header/meta';
 import Footer from '../layout/footer';
-import { AuthProvider } from '../auth';
+import { AuthProvider } from '../components/Auth/auth';
 
 const useStyles = makeStyles({
   main: {

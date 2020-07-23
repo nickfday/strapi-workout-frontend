@@ -19,7 +19,9 @@ import DesktopNav from './desktopNav';
 import Drawer from '../Drawer';
 import Logo from '../logo';
 import Login from './login';
+import Logout from 'src/components/Auth/Logout';
 import Link from 'src/components/Link';
+import firebaseApp from '../../../base';
 
 const useStyles = makeStyles((theme) => ({
   menuButton: {
@@ -53,6 +55,8 @@ const Nav = (items) => {
   const menuId = 'primary-search-account-menu';
   const isMenuOpen = Boolean(anchorEl);
   const classes = useStyles();
+
+  const user = firebaseApp.auth().currentUser;
 
   return (
     <Box component="nav" mb={5}>
@@ -97,15 +101,27 @@ const Nav = (items) => {
       >
         {/* <Login />
         <MenuItem onClick={handleMenuClose}>Profile</MenuItem> */}
-        <MenuItem>
-          <Link url="/login">Login</Link>
-        </MenuItem>
-        <MenuItem>
-          <Link url="/signup">Sign up</Link>
-        </MenuItem>
-        <MenuItem>
-          <Link url="/my-account">My Account</Link>
-        </MenuItem>{' '}
+        {!user && (
+          <>
+            <MenuItem>
+              <Link url="/login">Login</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link url="/signup">Sign up</Link>
+            </MenuItem>
+          </>
+        )}
+
+        {user && (
+          <>
+            <MenuItem>
+              <Link url="/my-account">My Account</Link>
+            </MenuItem>
+            <MenuItem>
+              <Logout />
+            </MenuItem>
+          </>
+        )}
       </Menu>
     </Box>
   );
