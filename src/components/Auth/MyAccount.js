@@ -9,8 +9,8 @@ const MyAccount = (props) => {
   return (
     <div>
       <h1>My Account</h1>
-      <p>Hello User {user.email}</p>
-      <Logout />
+      <p>Email: {user.email}</p>
+      <Logout>Logout</Logout>
     </div>
   );
 };

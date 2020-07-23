@@ -1,4 +1,6 @@
 import React, { useCallback, useContext } from 'react';
+import { Button, TextField, FormControl } from '@material-ui/core';
+
 import { useRouter, withRouter } from 'next/router';
 import firebaseApp from '../../base.js';
 import { AuthContext } from './auth';
@@ -29,15 +31,31 @@ const Login = () => {
     <div>
       <h1>Log in</h1>
       <form onSubmit={handleLogin}>
-        <label>
-          Email
-          <input name="email" type="email" placeholder="Email" />
-        </label>
-        <label>
-          Password
-          <input name="password" type="password" placeholder="Password" />
-        </label>
-        <button type="submit">Log in</button>
+        <FormControl margin="normal">
+          <TextField
+            id="name"
+            name="email"
+            label="Email"
+            variant="outlined"
+            type="email"
+            margin="normal"
+          />
+
+          <TextField
+            id="name"
+            name="password"
+            label="Password"
+            variant="outlined"
+            type="password"
+            margin="normal"
+          />
+
+          <Button variant="contained" color="primary" type="submit">
+            Login
+          </Button>
+        </FormControl>
+
+        {/* <button type="submit">Log in</button> */}
       </form>
     </div>
   );

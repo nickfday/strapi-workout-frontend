@@ -106,9 +106,6 @@ const Nav = (items) => {
             <MenuItem>
               <Link url="/login">Login</Link>
             </MenuItem>
-            <MenuItem>
-              <Link url="/signup">Sign up</Link>
-            </MenuItem>
           </>
         )}
 
@@ -118,7 +115,7 @@ const Nav = (items) => {
               <Link url="/my-account">My Account</Link>
             </MenuItem>
             <MenuItem>
-              <Logout />
+              <Logout>Logout</Logout>
             </MenuItem>
           </>
         )}

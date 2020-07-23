@@ -15,7 +15,7 @@ const Logout = (props) => {
     }
   }, []);
 
-  return <button onClick={handleLogout}>Log out</button>;
+  return <div onClick={handleLogout}>{props.children}</div>;
 };
 
 export default Logout;
