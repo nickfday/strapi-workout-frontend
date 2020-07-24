@@ -1,5 +1,7 @@
 import React, { useCallback } from 'react';
 import { withRouter, Router } from 'next/router';
+import { Button, TextField, FormControl, Box } from '@material-ui/core';
+
 import firebaseApp from '../../base';
 
 const SignUp = () => {
@@ -20,15 +22,30 @@ const SignUp = () => {
     <div>
       <h1>Sign up</h1>
       <form onSubmit={handleSignUp}>
-        <label>
-          Email
-          <input name="email" type="email" placeholder="Email" />
-        </label>
-        <label>
-          Password
-          <input name="password" type="password" placeholder="Password" />
-        </label>
-        <button type="submit">Sign Up</button>
+        <FormControl margin="normal">
+          <TextField
+            id="name"
+            name="email"
+            label="Email"
+            variant="outlined"
+            type="email"
+            margin="normal"
+          />
+
+          <TextField
+            id="name"
+            name="password"
+            label="Password"
+            variant="outlined"
+            type="password"
+            margin="normal"
+          />
+          <Box mt={2}>
+            <Button variant="contained" color="primary" type="submit">
+              Register
+            </Button>
+          </Box>
+        </FormControl>
       </form>
     </div>
   );

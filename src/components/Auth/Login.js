@@ -1,5 +1,5 @@
 import React, { useCallback, useContext } from 'react';
-import { Button, TextField, FormControl } from '@material-ui/core';
+import { Button, TextField, FormControl, Box } from '@material-ui/core';
 
 import { useRouter, withRouter } from 'next/router';
 import firebaseApp from '../../base.js';
@@ -49,10 +49,11 @@ const Login = () => {
             type="password"
             margin="normal"
           />
-
-          <Button variant="contained" color="primary" type="submit">
-            Login
-          </Button>
+          <Box mt={2}>
+            <Button variant="contained" color="primary" type="submit">
+              Login
+            </Button>
+          </Box>
         </FormControl>
 
         {/* <button type="submit">Log in</button> */}

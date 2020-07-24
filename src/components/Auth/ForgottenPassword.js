@@ -1,6 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import firebaseApp from '../../base.js';
 import { useRouter, withRouter } from 'next/router';
+import { Button, TextField, FormControl, Box } from '@material-ui/core';
+
+import firebaseApp from '../../base.js';
 
 const ForgottenPassword = (props) => {
   console.log(props);
@@ -23,11 +25,22 @@ const ForgottenPassword = (props) => {
     <div>
       <h1>Forgotten Password</h1>
       <form onSubmit={handleForgottenPassword}>
-        <label>
-          Email
-          <input name="email" type="email" placeholder="Email" />
-        </label>
-        <button type="submit">Reset Password</button>
+        <FormControl margin="normal">
+          <TextField
+            id="name"
+            name="email"
+            label="Email"
+            variant="outlined"
+            type="email"
+            margin="normal"
+          />
+
+          <Box mt={2}>
+            <Button variant="contained" color="primary" type="submit">
+              Submit
+            </Button>
+          </Box>
+        </FormControl>
       </form>
       {emailSent && <p>An email with instructions has been sent</p>}
     </div>
