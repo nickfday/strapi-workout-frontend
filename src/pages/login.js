@@ -10,12 +10,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Paper from '@material-ui/core/Paper';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import {
+  AppBar,
+  Paper,
+  Tabs,
+  Tab,
+  Typography,
+  Box,
+  Container,
+} from '@material-ui/core';
+
 import Login from '../components/Auth/Login';
 import Signup from '../components/Auth/Signup';
 import ForgottenPassword from '../components/Auth/ForgottenPassword';
@@ -70,27 +74,29 @@ export default function SimpleTabs() {
 
   return (
     <div className={classes.root}>
-      <Paper square>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="simple tabs example"
-        >
-          <Tab label="Login" {...a11yProps(0)} />
-          <Tab label="Register" {...a11yProps(1)} />
-          <Tab label="Forgotten Password" {...a11yProps(2)} />
-        </Tabs>
-      </Paper>
+      <Container>
+        <Paper square>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="simple tabs example"
+          >
+            <Tab label="Login" {...a11yProps(0)} />
+            <Tab label="Register" {...a11yProps(1)} />
+            <Tab label="Forgotten Password" {...a11yProps(2)} />
+          </Tabs>
+        </Paper>
 
-      <TabPanel value={value} index={0}>
-        <Login />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <Signup />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <ForgottenPassword />
-      </TabPanel>
+        <TabPanel value={value} index={0}>
+          <Login />
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <Signup />
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          <ForgottenPassword />
+        </TabPanel>
+      </Container>
     </div>
   );
 }

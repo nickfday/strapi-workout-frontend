@@ -1,5 +1,7 @@
 import React, { useCallback } from 'react';
 import { withRouter, Router } from 'next/router';
+import Link from 'components/Link';
+
 import { Button, TextField, FormControl, Box } from '@material-ui/core';
 
 import firebaseApp from '../../base';
@@ -22,7 +24,24 @@ const SignUp = () => {
     <div>
       <h1>Sign up</h1>
       <form onSubmit={handleSignUp}>
-        <FormControl margin="normal">
+        <FormControl margin="normal" fullWidth>
+          <TextField
+            id="firstName"
+            name="firstName"
+            label="First Name"
+            variant="outlined"
+            type="text"
+            margin="normal"
+          />
+
+          <TextField
+            id="surname"
+            name="surname"
+            label="Surname"
+            variant="outlined"
+            type="text"
+            margin="normal"
+          />
           <TextField
             id="name"
             name="email"
@@ -47,6 +66,11 @@ const SignUp = () => {
           </Box>
         </FormControl>
       </form>
+      <p>
+        By clicking register I accept the{' '}
+        <Link url="/terms-and-conditions">terms and conditions</Link> and{' '}
+        <Link url="/privacy-policy">privacy policy</Link>
+      </p>
     </div>
   );
 };

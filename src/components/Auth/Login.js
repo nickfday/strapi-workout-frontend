@@ -31,7 +31,7 @@ const Login = () => {
     <div>
       <h1>Log in</h1>
       <form onSubmit={handleLogin}>
-        <FormControl margin="normal">
+        <FormControl margin="normal" fullWidth>
           <TextField
             id="name"
             name="email"

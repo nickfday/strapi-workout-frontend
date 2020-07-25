@@ -25,7 +25,7 @@ const ForgottenPassword = (props) => {
     <div>
       <h1>Forgotten Password</h1>
       <form onSubmit={handleForgottenPassword}>
-        <FormControl margin="normal">
+        <FormControl margin="normal" fullWidth>
           <TextField
             id="name"
             name="email"
@@ -34,10 +34,14 @@ const ForgottenPassword = (props) => {
             type="email"
             margin="normal"
           />
+          <p>
+            We will email you a link to a secure page where you can create your
+            new password.
+          </p>
 
           <Box mt={2}>
             <Button variant="contained" color="primary" type="submit">
-              Submit
+              Send
             </Button>
           </Box>
         </FormControl>
