@@ -9,12 +9,17 @@ import firebaseApp from '../../base';
 const SignUp = () => {
   const handleSignUp = useCallback(async (event) => {
     event.preventDefault();
-    const { email, password } = event.target.elements;
+    const { email, password, displayName } = event.target.elements;
     try {
       await firebaseApp
         .auth()
-        .createUserWithEmailAndPassword(email.value, password.value);
-      Router.push('/dashboard');
+        .createUserWithEmailAndPassword(email.value, password.value)
+        .then((result) => {
+          return result.user.updateProfile({
+            displayName: displayName.value,
+          });
+        });
+      Router.push('/my-account');
     } catch (error) {
       alert(error);
     }
@@ -26,22 +31,22 @@ const SignUp = () => {
       <form onSubmit={handleSignUp}>
         <FormControl margin="normal" fullWidth>
           <TextField
-            id="firstName"
-            name="firstName"
-            label="First Name"
+            id="displayName"
+            name="displayName"
+            label="Name"
             variant="outlined"
             type="text"
             margin="normal"
           />
 
-          <TextField
+          {/* <TextField
             id="surname"
             name="surname"
             label="Surname"
             variant="outlined"
             type="text"
             margin="normal"
-          />
+          /> */}
           <TextField
             id="name"
             name="email"
