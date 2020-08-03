@@ -1,12 +1,3 @@
-// import React from 'react';
-// import Login from '../components/Auth/Login';
-
-// const Signin = () => {
-//   return <Login />;
-// };
-
-// export default Signin;
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
