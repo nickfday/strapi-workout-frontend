@@ -1,5 +1,5 @@
 import { MediaProps } from 'types/media';
-import { LinkProps } from 'components/Link';
+import { LinkProps } from 'components/LinkOld';
 
 export interface ArticleDataItem {
   title: string;

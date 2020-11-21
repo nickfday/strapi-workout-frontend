@@ -9,7 +9,7 @@ import {
   Grid,
 } from '@material-ui/core';
 import MaterialCard from '@material-ui/core/Card';
-import Link, { LinkProps } from 'components/Link';
+import Link, { LinkProps } from 'components/LinkOld';
 import { StyledCardMedia } from './styles';
 import { MediaProps } from 'types/media';
 

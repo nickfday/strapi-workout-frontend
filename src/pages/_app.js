@@ -10,7 +10,7 @@ import theme from '../theme';
 import Header from '../layout/header';
 import Meta from '../layout/header/meta';
 import Footer from '../layout/footer';
-import { AuthProvider } from '../components/Auth/auth';
+// import { AuthProvider } from '../components/Auth/auth';
 
 const useStyles = makeStyles({
   main: {
@@ -33,7 +33,6 @@ export default function MyApp(props) {
 
   return (
     <React.Fragment>
-      <AuthProvider>
         <Head>
           <Meta />
         </Head>
@@ -45,7 +44,6 @@ export default function MyApp(props) {
           </Container>
           <Footer />
         </ThemeProvider>
-      </AuthProvider>
     </React.Fragment>
   );
 }

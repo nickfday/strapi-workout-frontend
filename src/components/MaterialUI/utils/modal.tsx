@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Container, Modal, Backdrop, Fade } from '@material-ui/core';
+import {  Modal, Backdrop, Fade } from '@material-ui/core';
 import InfoIcon from '@material-ui/icons/Info';
 
 const useStyles = makeStyles((theme) => ({
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function TransitionsModal(props) {
+export default function TransitionsModal(props: any) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -59,7 +59,7 @@ export default function TransitionsModal(props) {
               react-transition-group animates me.
             </p> */}
           </div>
-        </Fade>
+        </Fade> 
       </Modal>
     </div>
   );

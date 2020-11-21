@@ -4,7 +4,7 @@ import { render, cleanup } from '@testing-library/react';
 import { ArticleList } from './list';
 import { ArticleTeaser } from './teaser';
 import { ArticleDetail } from './detail';
-import * as mockData from './mockData.json';
+import * as mockData from './fixtures.json';
 
 afterEach(cleanup);
 

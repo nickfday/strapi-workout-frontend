@@ -4,7 +4,7 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import styled from 'styled-components';
 import { MediaProps } from 'types/media';
-import Link, { LinkProps } from 'components/Link';
+import Link, { LinkProps } from 'components/LinkOld';
 
 const StyledWrapper = styled.div`
     display: 'flex',

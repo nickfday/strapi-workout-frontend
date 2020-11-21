@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Box } from '@material-ui/core';
-import Link from 'components/Link';
+import Link from 'components/LinkOld';
 import { MaterialAdvancedGridList } from 'components/MaterialUI/Layout/GridList/AdvancedGridList';
 import { RoutineTypes } from './types';
 

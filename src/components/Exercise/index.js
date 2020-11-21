@@ -13,6 +13,7 @@ import {
 import Link from 'components/Link';
 
 const Exercise = ({ exercises }) => {
+  console.log(exercises);
   const headers = ['Exercise', 'Type', 'Primary Muscle', 'Equipment'];
   const [title, setTitle] = useState('');
   const filteredExercises = [];
