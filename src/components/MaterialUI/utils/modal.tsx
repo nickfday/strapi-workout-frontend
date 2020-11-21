@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {  Modal, Backdrop, Fade } from '@material-ui/core';
+import { Modal, Backdrop, Fade } from '@material-ui/core';
 import InfoIcon from '@material-ui/icons/Info';
 
 const useStyles = makeStyles((theme) => ({
@@ -59,7 +59,7 @@ export default function TransitionsModal(props: any) {
               react-transition-group animates me.
             </p> */}
           </div>
-        </Fade> 
+        </Fade>
       </Modal>
     </div>
   );

@@ -134,4 +134,4 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Basic = () => <CardGroup {...data.page.components[0]} />;
+export const Basic = () => <CardGroup {...items} />;

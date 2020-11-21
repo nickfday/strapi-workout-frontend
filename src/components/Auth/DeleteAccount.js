@@ -17,7 +17,7 @@ const DeleteAccount = (props) => {
 
     const credentials = firebase.auth.EmailAuthProvider.credential(
       user.email,
-      password.value,
+      password.value
     );
 
     user

@@ -33,17 +33,17 @@ export default function MyApp(props) {
 
   return (
     <React.Fragment>
-        <Head>
-          <Meta />
-        </Head>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <Header />
-          <Container className={classes.main}>
-            <Component {...pageProps} />
-          </Container>
-          <Footer />
-        </ThemeProvider>
+      <Head>
+        <Meta />
+      </Head>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Header />
+        <Container className={classes.main}>
+          <Component {...pageProps} />
+        </Container>
+        <Footer />
+      </ThemeProvider>
     </React.Fragment>
   );
 }

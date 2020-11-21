@@ -6,7 +6,7 @@
 // };
 
 module.exports = {
-  stories: ['../src/**/stories.[tj]s'],
+   stories: ['../src/**/stories.@(ts|tsx|js)'],
   // addons: ['@storybook/addon-knobs/register'],
   addons: ['@storybook/preset-typescript', '@storybook/addon-knobs/register'],
   typescript: {

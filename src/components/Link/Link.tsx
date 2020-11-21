@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import {
   LinkContext,
-  LinkContextValue
+  LinkContextValue,
 } from '../../providers/Link/LinkProvider';
 /**
  *
@@ -20,13 +20,13 @@ const Link: React.FC<LinkProps> = ({
   href,
   useMz,
   className,
-  target
+  target,
 }) => {
   const linkContext = useContext<LinkContextValue | undefined>(LinkContext);
   const mzProps = useMz
     ? {
         'data-mz': true,
-        'data-type': `open_${href?.substr(1)}`
+        'data-type': `open_${href?.substr(1)}`,
       }
     : {};
   if (linkContext) {

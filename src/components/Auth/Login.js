@@ -8,7 +8,7 @@ import { AuthContext } from './auth';
 
 const Login = () => {
   const router = useRouter();
-  var provider = new firebase.auth.GoogleAuthProvider();
+  const provider = new firebase.auth.GoogleAuthProvider();
 
   const handleLogin = useCallback(async (event) => {
     event.preventDefault();
@@ -29,19 +29,19 @@ const Login = () => {
       .signInWithPopup(provider)
       .then(function (result) {
         // This gives you a Google Access Token. You can use it to access the Google API.
-        var token = result.credential.accessToken;
+        const token = result.credential.accessToken;
         // The signed-in user info.
-        var user = result.user;
+        const user = result.user;
         // ...
       })
       .catch(function (error) {
         // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
+        const errorCode = error.code;
+        const errorMessage = error.message;
         // The email of the user's account used.
-        var email = error.email;
+        const email = error.email;
         // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
+        const credential = error.credential;
         // ...
       });
   };

@@ -38,7 +38,7 @@ interface TileDataItem {
 }
 
 const MaterialAdvancedGridList: React.FC<MaterialAdvancedGridListProps> = (
-  props,
+  props
 ) => {
   return (
     <StyledWrapper>
@@ -52,7 +52,7 @@ const MaterialAdvancedGridList: React.FC<MaterialAdvancedGridListProps> = (
             {tile.media && (
               <img src={tile.media.formats.medium.url} alt={tile.title} />
             )}
-            <Link href={`${tile.link.url}`}> 
+            <Link href={`${tile.link.href}`}>
               <StyledGridListTileBar title={tile.title} />
             </Link>
           </GridListTile>

@@ -38,5 +38,5 @@ export default withApollo(
       cache: new InMemoryCache({ fragmentMatcher })
         //  rehydrate the cache using the initial data passed from the server:
         .restore(initialState || {}),
-    }),
+    })
 );

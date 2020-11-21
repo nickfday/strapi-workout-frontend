@@ -55,7 +55,6 @@ const Nav = (items) => {
   const isMenuOpen = Boolean(anchorEl);
   const classes = useStyles();
 
-
   return (
     <Box component="nav" mb={5}>
       <StyledAppBar position="static">
@@ -96,12 +95,10 @@ const Nav = (items) => {
         open={isMenuOpen}
         onClose={handleMenuClose}
         classes={classes.menu}
-      >  
-        
-            <MenuItem>
-              <Link url="/login">Login</Link>
-            </MenuItem> 
-
+      >
+        <MenuItem>
+          <Link url="/login">Login</Link>
+        </MenuItem>
       </Menu>
     </Box>
   );

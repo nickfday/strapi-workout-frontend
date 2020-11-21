@@ -12,7 +12,7 @@ const StyledLogo = styled.div`
 const Logo = (props) => {
   return (
     <StyledLogo>
-      <Link url="/">Workout Mentor</Link>
+      <Link href="/">Workout Mentor</Link>
     </StyledLogo>
   );
 };

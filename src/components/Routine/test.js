@@ -21,7 +21,7 @@ describe('ArticleList', () => {
 
   it('renders an routine detail component', () => {
     const { getAllByTestId } = render(
-      <ArticleDetail {...mockData.data.routines[0]} />,
+      <ArticleDetail {...mockData.data.routines[0]} />
     );
     expect(getAllByTestId('routineDetail')).toHaveLength(1);
     expect(document.querySelector('h1').textContent).toBe('Sample Routine');
