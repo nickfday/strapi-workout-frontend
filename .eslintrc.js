@@ -7,14 +7,14 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'prettier',
     'prettier/react',
-    'prettier/@typescript-eslint'
+    'prettier/@typescript-eslint',
   ],
   parserOptions: {
-    project: `./tsconfig.alt.json`
+    project: `./tsconfig.alt.json`,
   },
   env: {
     browser: true,
-    node: true
+    node: true,
   },
   ignorePatterns: ['/dist'],
   rules: {
@@ -31,19 +31,19 @@ module.exports = {
           '**/*.test.tsx',
           'jest/*.ts',
           './*.js',
-          'src/utils/testUtils.ts'
-        ]
-      }
+          'src/utils/testUtils.ts',
+        ],
+      },
     ],
     'global-require': 'off',
-    'no-only-tests/no-only-tests': 'error'
+    'no-only-tests/no-only-tests': 'error',
   },
   settings: {
     'import/resolver': {
       typescript: {
-        alwaysTryTypes: true
-      }
-    }
+        alwaysTryTypes: true,
+      },
+    },
   },
   overrides: [
     {
@@ -52,8 +52,8 @@ module.exports = {
       env: {
         browser: true,
         node: true,
-        jest: true
-      }
-    }
-  ]
+        jest: true,
+      },
+    },
+  ],
 };

@@ -39,14 +39,14 @@ describe('TemporaryDrawer', () => {
 
     debug();
 
-    //fireEvent.keyDown(document.querySelector('.MuiBackdrop-root'), { key: 'Escape', code: '27' });
+    // fireEvent.keyDown(document.querySelector('.MuiBackdrop-root'), { key: 'Escape', code: '27' });
 
-    //fireEvent.click(document.querySelector('.MuiBackdrop-root'));
+    // fireEvent.click(document.querySelector('.MuiBackdrop-root'));
 
-    //expect(document.querySelector('.MuiDrawer-paperAnchorLeft')).toBe(null);
+    // expect(document.querySelector('.MuiDrawer-paperAnchorLeft')).toBe(null);
 
-    //expect(document.querySelector('a').href).toBe('http://localhost/exercises');
-    //fireEvent.click(document.querySelector("button"));
-    //expect(asFragment('getByLabelText')).toBe('menu');
+    // expect(document.querySelector('a').href).toBe('http://localhost/exercises');
+    // fireEvent.click(document.querySelector("button"));
+    // expect(asFragment('getByLabelText')).toBe('menu');
   });
 });

@@ -52,7 +52,7 @@ const MaterialAdvancedGridList: React.FC<MaterialAdvancedGridListProps> = (
             {tile.media && (
               <img src={tile.media.formats.medium.url} alt={tile.title} />
             )}
-            <Link href={`${tile.link.href}`}>
+            <Link href={`${tile.link.url}`}>
               <StyledGridListTileBar title={tile.title} />
             </Link>
           </GridListTile>

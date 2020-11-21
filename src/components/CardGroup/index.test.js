@@ -22,7 +22,7 @@ describe('CardGroup', () => {
     const { getByTestId } = render(<CardGroup {...cardData} />);
     expect(getByTestId('title').textContent).toBe('Exercises');
     expect(getByTestId('body').textContent).toBe(
-      'Browse our exercise database with instructions, information and videos.'
+      'Browse our exercise database with instructions, information and videos.',
     );
   });
 });
