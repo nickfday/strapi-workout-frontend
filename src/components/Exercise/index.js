@@ -28,7 +28,7 @@ const Exercise = ({ exercises }) => {
 
   const dynamicRows = filteredExercises.map((item) => {
     return [
-      <Link key={item.id} url={`exercise/${item.slug}`}>
+      <Link key={item.id} href={`exercise/${item.slug}`}>
         {item.title}
       </Link>,
       item.type.replace(/_/g, ' '),

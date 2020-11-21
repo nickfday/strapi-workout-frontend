@@ -4,7 +4,7 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import styled from 'styled-components';
 import { MediaProps } from 'types/media';
-import Link, { LinkProps } from 'components/LinkOld';
+import Link, { LinkProps } from 'components/Link';
 
 const StyledWrapper = styled.div`
     display: 'flex',
@@ -52,7 +52,7 @@ const MaterialAdvancedGridList: React.FC<MaterialAdvancedGridListProps> = (
             {tile.media && (
               <img src={tile.media.formats.medium.url} alt={tile.title} />
             )}
-            <Link url={`${tile.link.url}`}>
+            <Link href={`${tile.link.url}`}> 
               <StyledGridListTileBar title={tile.title} />
             </Link>
           </GridListTile>

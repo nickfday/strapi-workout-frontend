@@ -7,7 +7,7 @@ import { Box, Grid } from '@material-ui/core';
 import Breadcrumb from 'components/Breadcrumb';
 import { RoutineDataItem } from './types';
 import CustomizedTables from 'components/MaterialUI/dataDisplay/table/alternateTable';
-import Link from 'components/LinkOld';
+import Link from 'components/Link';
 import TransitionsModal from '../MaterialUI/utils/modal';
 import { format } from 'date-fns';
 
@@ -32,10 +32,9 @@ const RoutineDetail: React.FC<RoutineDataItem> = ({
   const dynamicRows = (sesh: any) => {
     return sesh.session.map((item: any) => {
       return [
-        <Link key={item.id} url={`/exercise/${item.exercise.slug}`}>
+        <Link key={item.id} href={`/exercise/${item.exercise.slug}`}>
           {item.exercise.title}
         </Link>,
-        ,
         item.sets,
         item.reps,
       ];

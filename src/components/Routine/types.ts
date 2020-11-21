@@ -1,5 +1,5 @@
 import { MediaProps } from 'types/media';
-import { LinkProps } from 'components/LinkOld';
+import { LinkProps } from 'components/Link';
 
 export interface SessionDataItem {
   title: string;

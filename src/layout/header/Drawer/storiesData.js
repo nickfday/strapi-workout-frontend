@@ -6,7 +6,7 @@ const NavData = {
         title: 'Home',
         link: {
           title: 'Home',
-          url: '/',
+          href: '/',
         },
       },
       {
@@ -14,7 +14,7 @@ const NavData = {
         title: 'Exercises',
         link: {
           title: 'Exercises',
-          url: '/exercises',
+          href: '/exercises',
         },
       },
       {
@@ -22,7 +22,7 @@ const NavData = {
         title: 'Routines',
         link: {
           title: 'Routines',
-          url: '/routines',
+          href: '/routines',
         },
       },
     ],

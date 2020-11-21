@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, Breadcrumbs } from '@material-ui/core';
 import styled from 'styled-components';
-import Link from 'components/LinkOld';
+import Link from 'components/Link';
 
 interface BreadcrumbProps {
   currentTitle: string;

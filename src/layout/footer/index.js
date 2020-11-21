@@ -19,7 +19,7 @@ const BottomNavData = {
         title: 'About us',
         link: {
           title: 'About us',
-          url: '/about-us',
+          href: '/about-us',
         },
       },
       {
@@ -27,7 +27,7 @@ const BottomNavData = {
         title: 'Contact',
         link: {
           title: 'Contact',
-          url: '/contact',
+          href: '/contact',
         },
       },
       {
@@ -35,7 +35,7 @@ const BottomNavData = {
         title: 'Privacy Policy',
         link: {
           title: 'Privacy Policy',
-          url: '/privacy-policy',
+          href: '/privacy-policy',
         },
       },
       {
@@ -43,7 +43,7 @@ const BottomNavData = {
         title: 'Terms and Conditions',
         link: {
           title: 'Terms and Conditions',
-          url: '/terms-and-conditions',
+          href: '/terms-and-conditions',
         },
       },
     ],
