@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import { GA_TRACKING_ID } from '../../../../lib/gtag';
-//import cookies from 'next-cookies';
+// import cookies from 'next-cookies';
 
 const Meta = () => {
   return (

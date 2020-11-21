@@ -7,7 +7,7 @@ import { ArticleTypes } from './types';
 
 const ArticleTeaser: React.FC<ArticleTypes> = ({ articles }) => {
   // set first item as featured
-  articles[0]['featured'] = true;
+  articles[0].featured = true;
 
   return (
     <Box mb={2} data-testid="articleTeaser">

@@ -51,13 +51,12 @@ const HeroBanner: React.FC<HeroBannerProps> = ({ title, media, video }) => {
         </StyledWrapper>
       </Box>
     );
-  } else {
-    return (
-      <Box mb={3} data-testid="heroBannerVideo">
-        <StyledVideo src={video.url} />
-      </Box>
-    );
   }
+  return (
+    <Box mb={3} data-testid="heroBannerVideo">
+      <StyledVideo src={video.url} />
+    </Box>
+  );
 };
 
 export default HeroBanner;

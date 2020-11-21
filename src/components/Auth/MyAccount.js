@@ -11,11 +11,11 @@ import VerifyEmail from './VerifyEmail';
 const MyAccount = (props) => {
   const router = useRouter();
   const { currentUser } = useContext(AuthContext);
-  //console.log(currentUser);
+  // console.log(currentUser);
 
-  //const user = firebaseApp.auth().currentUser;
+  // const user = firebaseApp.auth().currentUser;
 
-  //console.log(user);
+  // console.log(user);
 
   // if (!currentUser) {
   //   router.push('/login');

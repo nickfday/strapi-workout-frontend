@@ -5,7 +5,7 @@ export interface LinkContextValue {
   Link: any;
 }
 export const LinkContext = createContext<undefined | LinkContextValue>(
-  undefined
+  undefined,
 );
 
 export const LinkProvider: React.FC<{ value: LinkContextValue }> = ({

@@ -5,11 +5,11 @@ import styled from 'styled-components';
 import Markdown from 'components/Markdown';
 import { Box, Grid } from '@material-ui/core';
 import Breadcrumb from 'components/Breadcrumb';
-import { RoutineDataItem } from './types';
 import CustomizedTables from 'components/MaterialUI/dataDisplay/table/alternateTable';
 import Link from 'components/Link';
-import TransitionsModal from '../MaterialUI/utils/modal';
 import { format } from 'date-fns';
+import TransitionsModal from '../MaterialUI/utils/modal';
+import { RoutineDataItem } from './types';
 
 const StyledImage = styled.img`
   width: 100%;

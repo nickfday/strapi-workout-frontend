@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
-import firebaseApp from '../../base.js';
 import { useRouter, withRouter } from 'next/router';
+import firebaseApp from '../../base.js';
 
 const Logout = (props) => {
   const router = useRouter();

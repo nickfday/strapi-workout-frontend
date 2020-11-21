@@ -73,7 +73,8 @@ const SummaryList: React.FC<SummaryListProps> = ({
         <ListItemText primary={primaryText} secondary={secondaryText} />
       </ListItem>
     );
-  } else return null;
+  }
+  return null;
 };
 
 const ExerciseSingle: React.FC<ExerciseSingleProps> = ({

@@ -7,7 +7,7 @@ import { RoutineTypes } from './types';
 
 const RoutineTeaser: React.FC<RoutineTypes> = ({ routines }) => {
   // set first item as featured
-  routines[0]['featured'] = true;
+  routines[0].featured = true;
 
   return (
     <Box data-testid="routineTeaser">

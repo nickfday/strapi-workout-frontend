@@ -17,7 +17,7 @@ const StyledCtaWrapper = styled('div')<{
 
   @media (min-width: 830px) {
     background-position-y: ${(props) =>
-      props.backgroundPositionY + 'px' || '0px'};
+      `${props.backgroundPositionY}px` || '0px'};
   }
 `;
 

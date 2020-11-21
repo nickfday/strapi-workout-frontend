@@ -1,41 +1,59 @@
 module.exports = {
-  parser: '@typescript-eslint/parser', // Specifies the ESLint parser
-  parserOptions: {
-    ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
-    sourceType: 'module', // Allows for the use of imports
-    ecmaFeatures: {
-      jsx: true // Allows for the parsing of JSX
-    }
-  },
-  env: {
-    node: true,
-    browser: true,
-    es6: true,
-    jest: true
-  },
-  settings: {
-    react: {
-      version: 'detect' // Tells eslint-plugin-react to automatically detect the version of React to use
-    }
-  },
-  plugins: ['prettier', 'react', 'react-hooks', '@typescript-eslint'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'react', 'prettier', 'no-only-tests'],
   extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:jest/recommended',
-    'plugin:prettier/recommended',
-    'plugin:@typescript-eslint/recommended',
+    'airbnb-typescript/base',
+    'airbnb/hooks',
+    'plugin:jsx-a11y/recommended',
+    'prettier',
     'prettier/react',
     'prettier/@typescript-eslint'
   ],
+  parserOptions: {
+    project: `./tsconfig.alt.json`
+  },
+  env: {
+    browser: true,
+    node: true
+  },
+  ignorePatterns: ['/dist'],
   rules: {
-    'react/prop-types': 'off',
-    'prettier/prettier': ['error', { singleQuote: true }],
-    'react/react-in-jsx-scope': 'off',
-    'jest/valid-expect': 'off',
-    'arrow-parens': 2
-
-    // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
-    // e.g. "@typescript-eslint/explicit-function-return-type": "off",
-  }
+    'prettier/prettier': ['error'],
+    'import/prefer-default-export': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'comma-dangle': 'off',
+    'function-paren-newline': 'off',
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          '**/*.stories.tsx',
+          '**/*.test.tsx',
+          'jest/*.ts',
+          './*.js',
+          'src/utils/testUtils.ts'
+        ]
+      }
+    ],
+    'global-require': 'off',
+    'no-only-tests/no-only-tests': 'error'
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true
+      }
+    }
+  },
+  overrides: [
+    {
+      files: ['src/**/*.test.@(ts|tsx)', 'jest/*'],
+      plugins: ['react', 'prettier', 'eslint-plugin-jest'],
+      env: {
+        browser: true,
+        node: true,
+        jest: true
+      }
+    }
+  ]
 };

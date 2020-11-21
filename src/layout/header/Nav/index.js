@@ -1,26 +1,32 @@
 import React, { useState } from 'react';
-//import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
+
+import {
+  Container,
+  Grid,
+  Hidden,
+  Menu,
+  MenuItem,
+  Box,
+  Toolbar,
+} from '@material-ui/core';
+
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import IconButton from '@material-ui/core/IconButton';
+import { makeStyles } from '@material-ui/core/styles';
+
+import Link from 'src/components/Link';
+import DesktopNav from './desktopNav';
+import Drawer from '../Drawer';
+import Logo from '../logo';
+// import Login from './login';
+// import Logout from 'src/components/Auth/Logout';
 import {
   Wrapper,
   StyledTypography,
   StyledMenuButton,
   StyledAppBar,
 } from './styles';
-
-import { Container, Grid, Hidden, Menu, MenuItem } from '@material-ui/core';
-
-import { Box, Toolbar } from '@material-ui/core';
-
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import IconButton from '@material-ui/core/IconButton';
-import { makeStyles } from '@material-ui/core/styles';
-
-import DesktopNav from './desktopNav';
-import Drawer from '../Drawer';
-import Logo from '../logo';
-// import Login from './login';
-// import Logout from 'src/components/Auth/Logout';
-import Link from 'src/components/Link';
 
 const useStyles = makeStyles((theme) => ({
   menuButton: {

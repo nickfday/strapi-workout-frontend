@@ -4,7 +4,7 @@ import { MaterialAdvancedGridList } from 'components/MaterialUI/Layout/GridList/
 import { ArticleTypes } from './types';
 
 const ArticleList: React.FC<ArticleTypes> = ({ articles }) => {
-  articles[0]['featured'] = true;
+  articles[0].featured = true;
 
   return (
     <Box data-testid="articleList">

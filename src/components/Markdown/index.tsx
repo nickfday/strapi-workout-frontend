@@ -37,7 +37,7 @@ interface MarkDownProps {
 }
 
 const Markdown: React.FC<MarkDownProps> = ({ source, body }) => {
-  return <StyledReactMarkdown source={source ? source : body} />;
+  return <StyledReactMarkdown source={source || body} />;
 };
 
 export default Markdown;

@@ -21,7 +21,7 @@ describe('ArticleList', () => {
 
   it('renders an article detail component', () => {
     const { getAllByTestId } = render(
-      <ArticleDetail {...mockData.data.articles[0]} />
+      <ArticleDetail {...mockData.data.articles[0]} />,
     );
     expect(getAllByTestId('articleDetail')).toHaveLength(1);
     expect(document.querySelector('h1').textContent).toBe('Sample Article');

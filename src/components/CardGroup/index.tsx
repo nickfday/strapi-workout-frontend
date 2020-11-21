@@ -10,8 +10,8 @@ import {
 } from '@material-ui/core';
 import MaterialCard from '@material-ui/core/Card';
 import Link, { LinkProps } from 'components/Link';
-import { StyledCardMedia } from './styles';
 import { MediaProps } from 'types/media';
+import { StyledCardMedia } from './styles';
 
 export interface CardGroupProps {
   cardGroup: CardProps[];

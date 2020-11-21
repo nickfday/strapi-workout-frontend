@@ -21,9 +21,8 @@ const ComponentBuilder = ({ components }) => {
       return React.createElement(reactComponents[property.__typename], {
         ...property,
       });
-    } else {
-      return null;
     }
+    return null;
   });
 };
 

@@ -38,7 +38,7 @@ interface TileDataItem {
 }
 
 const MaterialAdvancedGridList: React.FC<MaterialAdvancedGridListProps> = (
-  props
+  props,
 ) => {
   return (
     <StyledWrapper>

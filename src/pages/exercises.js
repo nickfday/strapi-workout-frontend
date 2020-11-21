@@ -1,6 +1,6 @@
 import React from 'react';
-import { getExercises } from '../../lib/api';
 import Exercise from 'components/Exercise';
+import { getExercises } from '../../lib/api';
 
 const Exercises = ({ allExercises }) => {
   return <Exercise exercises={allExercises} />;
