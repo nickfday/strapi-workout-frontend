@@ -9,7 +9,7 @@ import {
   Grid,
 } from '@material-ui/core';
 import MaterialCard from '@material-ui/core/Card';
-import Link, { LinkProps } from 'components/LinkOld';
+import Link, { LinkProps } from 'components/Link';
 import { StyledCardMedia } from './styles';
 import { MediaProps } from 'types/media';
 
@@ -46,7 +46,7 @@ const CARD_FRAGMENT = gql`
 const Card: React.FC<CardProps> = ({ title, body, link, media }) => {
   return (
     <MaterialCard data-testid="card">
-      <Link url={link.url}>
+      <Link url={link.href}>
         <CardActionArea>
           <StyledCardMedia
             image={media.formats.medium.url}

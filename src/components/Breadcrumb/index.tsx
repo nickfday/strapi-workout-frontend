@@ -46,7 +46,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
 }) => {
   return (
     <StyledBreadcrumb aria-label="breadcrumb">
-      <Link url={previousSlug}>{previousTitle}</Link>
+      <Link href={previousSlug}>{previousTitle}</Link>
       <Typography color="textPrimary">{currentTitle}</Typography>
     </StyledBreadcrumb>
   );

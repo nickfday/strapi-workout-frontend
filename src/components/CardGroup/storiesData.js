@@ -6,7 +6,7 @@ const cardGroupData = {
       body:
         'Browse our exercise database with instructions, information and videos.',
       media: {
-        url: '/uploads/istockphoto-614107160-1024x1024_e8459fa052.jpeg',
+        url: 'https://strapi-workout.s3.eu-west-2.amazonaws.com/small_calendar-cup-depth-of-field-210660_329d203bb8.jpeg',
       },
       link: {
         title: 'exercises',
@@ -19,7 +19,7 @@ const cardGroupData = {
       body:
         'Browse our list of workout routines and find the right one for your goals.',
       media: {
-        url: '/uploads/calendar-cup-depth-of-field-210660_3785bd3a87.jpeg',
+        url: 'https://strapi-workout.s3.eu-west-2.amazonaws.com/small_calendar-cup-depth-of-field-210660_329d203bb8.jpeg',
       },
       link: {
         title: 'routines',
@@ -37,7 +37,7 @@ const cardData = {
       body:
         'Browse our exercise database with instructions, information and videos.',
       media: {
-        url: '/uploads/istockphoto-614107160-1024x1024_e8459fa052.jpeg',
+        url: 'https://strapi-workout.s3.eu-west-2.amazonaws.com/small_calendar-cup-depth-of-field-210660_329d203bb8.jpeg',
       },
       link: {
         title: 'exercises',
