@@ -1,0 +1,16 @@
+---
+to: src/components/<%= name %>/<%= name %>.tsx
+---
+import React from 'react';
+import * as Styled from './styled';
+
+export interface <%= name %>Props {
+/** Document non obvious props like this so storybook picks up */
+  prop: string;
+}
+
+const <%= name %>: React.FC<<%= name %>Props> = ({ children, prop }) => (
+  <Styled.Root someProp={true}>{children}</Styled.Root>
+);
+
+export default <%= name %>;

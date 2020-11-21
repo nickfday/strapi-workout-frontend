@@ -1,0 +1,8 @@
+---
+to: src/components/<%= name %>/fixtures.ts
+---
+import { <%= name %>Props } from '.';
+
+export const <%= h.changeCase.camel(name) %>UseCaseName: <%= name %>Props = {
+  prop: 'prop value',
+};
