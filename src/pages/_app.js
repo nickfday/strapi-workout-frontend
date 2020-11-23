@@ -12,6 +12,9 @@ import Meta from '../layout/header/meta';
 import Footer from '../layout/footer';
 // import { AuthProvider } from '../components/Auth/auth';
 
+// import { Provider } from 'react-redux';
+// import { useStore } from '../store';
+
 const useStyles = makeStyles({
   main: {
     marginBottom: '40px',
@@ -22,6 +25,7 @@ const useStyles = makeStyles({
 export default function MyApp(props) {
   const classes = useStyles();
   const { Component, pageProps } = props;
+  // const store = useStore(pageProps.initialReduxState);
 
   React.useEffect(() => {
     // Remove the server-side injected CSS.
