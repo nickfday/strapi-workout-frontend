@@ -103,7 +103,7 @@ const Nav = (items) => {
         classes={classes.menu}
       >
         <MenuItem>
-          <Link url="/login">Login</Link>
+          <Link href="/login">Login</Link>
         </MenuItem>
       </Menu>
     </Box>

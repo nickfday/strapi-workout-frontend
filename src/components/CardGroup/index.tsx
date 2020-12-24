@@ -46,7 +46,7 @@ const CARD_FRAGMENT = gql`
 const Card: React.FC<CardProps> = ({ title, body, link, media }) => {
   return (
     <MaterialCard data-testid="card">
-      <Link url={link.href}>
+      <Link href={link.url}>
         <CardActionArea>
           <StyledCardMedia
             image={media.formats.medium.url}

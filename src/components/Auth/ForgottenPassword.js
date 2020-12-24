@@ -2,29 +2,27 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useRouter, withRouter } from 'next/router';
 import { Button, TextField, FormControl, Box } from '@material-ui/core';
 
-import firebaseApp from '../../base.js';
-
 const ForgottenPassword = (props) => {
   console.log(props);
   const router = useRouter();
   const { emailSent, setEmailSent } = useState(false);
 
-  const handleForgottenPassword = useCallback(async (event) => {
-    event.preventDefault();
-    const { email } = event.target.elements;
-    try {
-      await firebaseApp.auth().sendPasswordResetEmail(email.value);
-      alert('Check Email for password instructions');
-      email.value = '';
-    } catch (error) {
-      alert(error);
-    }
-  }, []);
+  // const handleForgottenPassword = useCallback(async (event) => {
+  //   event.preventDefault();
+  //   const { email } = event.target.elements;
+  //   try {
+  //     await firebaseApp.auth().sendPasswordResetEmail(email.value);
+  //     alert('Check Email for password instructions');
+  //     email.value = '';
+  //   } catch (error) {
+  //     alert(error);
+  //   }
+  // }, []);
 
   return (
     <div>
       <h1>Forgotten Password</h1>
-      <form onSubmit={handleForgottenPassword}>
+      <form>
         <FormControl margin="normal" fullWidth>
           <TextField
             id="name"

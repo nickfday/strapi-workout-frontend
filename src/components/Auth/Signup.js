@@ -4,31 +4,29 @@ import Link from 'components/Link';
 
 import { Button, TextField, FormControl, Box } from '@material-ui/core';
 
-import firebaseApp from '../../base';
-
 const SignUp = () => {
-  const handleSignUp = useCallback(async (event) => {
-    event.preventDefault();
-    const { email, password, displayName } = event.target.elements;
-    try {
-      await firebaseApp
-        .auth()
-        .createUserWithEmailAndPassword(email.value, password.value)
-        .then((result) => {
-          return result.user.updateProfile({
-            displayName: displayName.value,
-          });
-        });
-      Router.push('/my-account');
-    } catch (error) {
-      alert(error);
-    }
-  }, []);
+  // const handleSignUp = useCallback(async (event) => {
+  //   event.preventDefault();
+  //   const { email, password, displayName } = event.target.elements;
+  //   try {
+  //     await firebaseApp
+  //       .auth()
+  //       .createUserWithEmailAndPassword(email.value, password.value)
+  //       .then((result) => {
+  //         return result.user.updateProfile({
+  //           displayName: displayName.value,
+  //         });
+  //       });
+  //     Router.push('/my-account');
+  //   } catch (error) {
+  //     alert(error);
+  //   }
+  // }, []);
 
   return (
     <div>
       <h1>Sign up</h1>
-      <form onSubmit={handleSignUp}>
+      <form>
         <FormControl margin="normal" fullWidth>
           <TextField
             id="displayName"
